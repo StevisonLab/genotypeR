@@ -1,0 +1,23 @@
+
+#########################################################################
+#' Read in Sequenom Data
+#'
+#' This function is a wrapper function around read.csv in order to genotype data provide data compatible with the genotypeR package.
+#' @param x This is a csv formated Genotypes tab of exported sequenom data that you would like to read in.
+#' @param ... Other arguments passed to the function
+#' @keywords read sequenom
+#' @return A dataframe suited for the genotypeR package
+#' @export
+#' @examples
+#' \dontrun{
+#' sequenom_data <- read_in_sequenom_data("your.csv")
+#' }
+read_in_sequenom_data <- function(x, ...){
+     sequenom_data <- read.csv(x, stringsAsFactors=FALSE, colClasses=c("character"), ...)
+
+     out <- sort_sequenom_df(sequenom_data)
+     
+     return(out)
+
+}
+#########################################################################
