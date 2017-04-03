@@ -3,7 +3,7 @@
 \docType{methods}
 \name{genotypes}
 \alias{genotypes}
-\alias{impossible_genotypes}
+\alias{impossible_genotype}
 \alias{counted_crossovers}
 \alias{binary_genotypes<-}
 \alias{genotypes<-}
@@ -28,7 +28,7 @@ counted_crossovers(object) <- value
 \description{
 Method genotypes.
 
-Method impossible_genotypes.
+Method impossible_genotype.
 
 Method counted_crossovers.
 
