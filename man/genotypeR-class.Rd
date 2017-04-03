@@ -7,10 +7,10 @@
 \alias{genotypeR-class}
 \title{Class genotypeR.}
 \usage{
-genotypes(object, ...)
+binary_genotypes(object, ...)
 }
 \description{
 Class \code{genotypeR} defines a gas sensor device.
 
-Method genotypes.
+Method binary_genotypes.
 }
