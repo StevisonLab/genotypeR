@@ -4,6 +4,13 @@
 
 ####################################################################################################
 ##constructor fxn
+#' Class genotypeR.
+#'
+#' Class \code{genotypeR} defines a gas sensor device.
+#'
+#' @name genotypeR-class
+#' @rdname genotypeR-class
+#' @exportClass genotypeR
 crossOveRs <- setClass("genotypeR",
                    slots = c(genotypes = "data.frame",
                              impossible_genotype = "vector",
@@ -15,6 +22,10 @@ crossOveRs <- setClass("genotypeR",
 ####################################################################################################
 ##accessor functions to the SLOTS!!!
 ##genotypes
+#' Method genotypes.
+#' @name genotypeR-class
+#' @rdname genotypeR-class
+#' @exportMethod genotypes
 setGeneric("genotypes", function(object, ...) standardGeneric("genotypes"))
 setMethod("genotypes", "genotypeR", function(object)object@genotypes)
 
