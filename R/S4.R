@@ -30,10 +30,10 @@ setGeneric("genotypes", function(object, ...) standardGeneric("genotypes"))
 setMethod("genotypes", "genotypeR", function(object)object@genotypes)
 
 ##impossible genotype
-#' Method impossible_genotypes.
-#' @name impossible_genotypes
+#' Method impossible_genotype.
+#' @name impossible_genotype
 #' @rdname genotypeR-methods
-#' @exportMethod impossible_genotypes
+#' @exportMethod impossible_genotype
 setGeneric("impossible_genotype", function(object, ...) standardGeneric("impossible_genotype"))
 setMethod("impossible_genotype", "genotypeR", function(object)object@impossible_genotype)
 
