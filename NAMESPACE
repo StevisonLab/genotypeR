@@ -3,6 +3,7 @@
 export(BC_Genotype_Warnings)
 export(CO)
 export(Ref_Alt_Table)
+export(SequenomMarkers)
 export(binary_coding)
 export(convert2qtl_table)
 export(count_CO)
