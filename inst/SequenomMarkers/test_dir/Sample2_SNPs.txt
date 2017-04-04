@@ -1,2 +1,0 @@
-Chrom	Start	End
-2	1933	2133
