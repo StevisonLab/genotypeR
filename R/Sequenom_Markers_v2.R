@@ -1,0 +1,45 @@
+#' R wrapper script to run Sequenom Marker design pipeline
+#'
+#' This function designs Sequenom markers.
+#' @param vcf1
+#' @param vcf2
+#' @param outdir
+#' @keywords SequenomMarker
+#' @return SequenomMarker design into "outdir"
+#' @export
+#' @examples
+#' \dontrun{
+#' SequenomMarkers("/home/ssefick/R/x86_64-redhat-linux-gnu-library/3.3/genotypeR/SequenomMarkers/FS14_test.vcf", "/home/ssefick/R/x86_64-redhat-linux-gnu-library/3.3/genotypeR/SequenomMarkers/FS16_test.vcf", "/home/ssefick/Desktop/Stevison_PostDoc/Projects/genotypeR/inst/SequenomMarkers/test_dir")
+#' }
+
+SequenomMarkers <- function(vcf1, vcf2, outdir){
+
+perl_module <- system.file("SequenomMarkers", package="genotypeR")
+
+files <- dir(perl_module, full.names=TRUE)
+
+
+
+##test data
+test <- 0
+if(test==1){
+    outdir <- paste("/home/ssefick/Desktop/Stevison_PostDoc/Projects/genotypeR/inst/SequenomMarkers", "test_dir", sep="/")
+
+
+    vcf1 <- paste(perl_module, "FS14_test.vcf", sep="/")
+
+    vcf2 <- paste(perl_module, "FS16_test.vcf", sep="/")
+  }
+
+if(dir.exists(outdir)==FALSE){
+dir.create(outdir, showWarnings = TRUE, recursive = FALSE, mode = "0777")
+}
+
+path_to_script <- paste(perl_module, "R_Pipeline_Rapper.sh", sep="/")
+
+cmd <- paste(shQuote(path_to_script), shQuote(perl_module), shQuote(outdir), shQuote(vcf1), shQuote(vcf2), sep=" ")
+
+system(cmd)
+    
+
+}
