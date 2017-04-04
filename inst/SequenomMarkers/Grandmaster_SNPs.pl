@@ -10,7 +10,7 @@ use warnings;
 use strict;
 
 # Removes the file from the directory using a shell command
-system("rm Master_SNPs.txt");
+system("rm -f Master_SNPs.txt");
 
 # Specifies the inputs and outputs
 my $input   = "Sample1_SNPs.txt";
