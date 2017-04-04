@@ -1,11 +1,13 @@
 Package: genotypeR
 Title: This package takes the output of Sequenom genotyping platform and preforms various data cleaning and analyses
 Version: 0.0.0.9000
-Authors@R: person(given="Stephen", family="Sefick", middle="A.", email = "ssefick@gmail.com", role = c("aut", "cre"))
+Authors@R: c(person(given=c("Stephen", "Alfred"), family="Sefick", email = "ssefick@gmail.com", role = c("aut", "cre")), person(given="Magdelena",family="Castranova", email = "mac0079@auburn.edu", role = c("aut")))
 Description: What the package does (one paragraph).
 Depends: R (>= 3.3.2)
 License: >= GPL 3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
+SystemRequirements: The SequenomMarkers marker design function requires vcftools and perl.
 Suggests: testthat
+Imports: reshape2, plyr, doBy
