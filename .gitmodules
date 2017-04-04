@@ -1,0 +1,3 @@
+[submodule "inst/SequenomMarkers"]
+	path = inst/SequenomMarkers
+	url = https://github.com/mcastronova/SequenomMarkers
