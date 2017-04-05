@@ -256,6 +256,20 @@ count_CO <- function(data, naive=FALSE){
     crossovers_out$start_Mb <- crossovers_out$start/1000000
     ##end in Mb
     crossovers_out$end_Mb <- crossovers_out$end/1000000
+
+##########################################################################################################
+    ##Kosambi Distance 
+    ##added 20170305
+    Kosambi <- function(x){
+        a <- 1 + (2*x)
+        b <- 1 - (2*x)    
+        d <- 0.25*log(a/b)
+        Kosambi_distance <- d*100
+        return(Kosambi_distance)
+    }
+
+    crossovers_out$Kosambi_cM <- Kosambi(crossovers_out$crossovers/crossovers_out$num_ind)
+    
 ################################################################
 ################################################################
 ################################################################
