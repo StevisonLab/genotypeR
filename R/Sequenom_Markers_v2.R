@@ -1,9 +1,10 @@
 #' R wrapper script to run Sequenom Marker design pipeline
 #'
 #' This function designs Sequenom markers.
-#' @param vcf1
-#' @param vcf2
-#' @param outdir
+#' @param vcf1 this is an uncompressed vcf file (Ref allele)
+#' @param vcf2 this is an uncompressed vcf file (Alt allele)
+#' @param outdir this is where the tab-delimited extended bed file will
+#' be written
 #' @keywords SequenomMarker
 #' @return SequenomMarker design into "outdir"
 #' @export

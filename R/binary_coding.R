@@ -2,10 +2,14 @@
 #############################################################################################################################
 #' Code genotypes as binary
 #' 
-#' @param genotype_warnings2NA
-#' @param genotype_table
+#' @param genotype_warnings2NA this is a genotypeR object that has been
+#' through BC_Genotype_Warnings with either output="warnings2NA" or
+#' output="pass_through"
+#' @param genotype_table this is a marker table produced with
+#' Ref_Alt_Table
 #' @keywords code genotypes as binary
-#' @return A dataframe of binary coded genotypes as a slot in the input
+#' @return A dataframe of binary coded genotypes as a slot in the
+#' genotypeR input genotype_warnings2NA
 #' @export
 #' @examples
 #' \dontrun{

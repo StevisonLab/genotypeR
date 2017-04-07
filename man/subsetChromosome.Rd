@@ -6,6 +6,11 @@
 \usage{
 subsetChromosome(aa, chromosome)
 }
+\arguments{
+\item{aa}{genotypeR object before binary coding}
+
+\item{chromosome}{which chromosome to pull out (e.g., "chr2")}
+}
 \value{
 A subsetted genotypeR object
 }

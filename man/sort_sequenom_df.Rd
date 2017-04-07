@@ -6,6 +6,10 @@
 \usage{
 sort_sequenom_df(Sequenom_Data2Sort)
 }
+\arguments{
+\item{Sequenom_Data2Sort}{dataframe to sort produced with the
+genotypeR package}
+}
 \value{
 A sorted dataframe suited for the genotypeR package
 }

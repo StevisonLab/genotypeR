@@ -6,6 +6,14 @@
 \usage{
 count_CO(data, naive = FALSE)
 }
+\arguments{
+\item{data}{genotype data read in with read_in_sequenom_data}
+
+\item{naive}{this takes 2 values: 1) FALSE (default) will count
+COs distributed by marker distance, and 2) TRUE returns will count
+COs without regard to marker distance (i.e., at the final
+non-missing data point in a string of missing gentypes)}
+}
 \value{
 genotypeR object with counted crossovers
 }

@@ -4,8 +4,10 @@
 #####################################################################################################
 #' write out table for import into rqtl
 #' 
-#' @param genotypeR_object
-#' @param temp_cross_for_qtl
+#' @param genotypeR_object this is a genotypeR object that has had
+#' genotypes coded as binary with binary_coding
+#' @param temp_cross_for_qtl name of the output file that will be output
+#' into the working directory
 #' @keywords genotypeR, rqtl
 #' @return table to disk for input into rqtl
 #' @export

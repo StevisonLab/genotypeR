@@ -1,12 +1,16 @@
 #############################################################################################################################
 #' Backcross genotype warnings; must provide warning allele
 #' 
-#' @param seq_data
-#' @param genotype_table
-#' @param warning_allele
-#' @param output
-#' @keywords 
-#' @return A dataframe of warnings
+#' @param seq_data is a dataframe of genotyping data
+#' @param genotype_table dataframe produced with Ref_Alt_Table
+#' @param warning_allele is the impossible allele for a BC design
+#' taking the value "Ref" or "Alt"
+#' @param output this can take 3 values: 1) "warnings" which returns
+#' a dataframe of BC warnings, 2) "warnings2NA" which returns a
+#' genotyping dataframe where the warnings have been converted to NAs,
+#' or "pass_through" which returns a dataframe that is unchanged.
+#' @keywords genotypeR
+#' @return A genotypeR object
 #' @export
 #' @examples
 #' \dontrun{

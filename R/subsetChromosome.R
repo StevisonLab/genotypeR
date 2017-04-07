@@ -3,8 +3,8 @@
 #####################################################################################################
 #' Subset genotypeR object by chromosome 
 #' 
-#' @param aa
-#' @param chromosome
+#' @param aa genotypeR object before binary coding
+#' @param chromosome which chromosome to pull out (e.g., "chr2")
 #' @keywords subset genotypeR object by chromosome
 #' @return A subsetted genotypeR object
 #' @export

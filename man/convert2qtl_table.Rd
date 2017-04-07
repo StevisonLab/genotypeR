@@ -7,6 +7,13 @@
 convert2qtl_table(genotypeR_object,
   temp_cross_for_qtl = "temp_cross_for_qtl.csv")
 }
+\arguments{
+\item{genotypeR_object}{this is a genotypeR object that has had
+genotypes coded as binary with binary_coding}
+
+\item{temp_cross_for_qtl}{name of the output file that will be output
+into the working directory}
+}
 \value{
 table to disk for input into rqtl
 }

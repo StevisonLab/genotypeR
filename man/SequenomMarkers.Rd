@@ -6,6 +6,14 @@
 \usage{
 SequenomMarkers(vcf1, vcf2, outdir)
 }
+\arguments{
+\item{vcf1}{this is an uncompressed vcf file (Ref allele)}
+
+\item{vcf2}{this is an uncompressed vcf file (Alt allele)}
+
+\item{outdir}{this is where the tab-delimited extended bed file will
+be written}
+}
 \value{
 SequenomMarker design into "outdir"
 }

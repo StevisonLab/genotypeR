@@ -7,8 +7,21 @@
 BC_Genotype_Warnings(seq_data, genotype_table, warning_allele = "Ref",
   output = "warnings")
 }
+\arguments{
+\item{seq_data}{is a dataframe of genotyping data}
+
+\item{genotype_table}{dataframe produced with Ref_Alt_Table}
+
+\item{warning_allele}{is the impossible allele for a BC design
+taking the value "Ref" or "Alt"}
+
+\item{output}{this can take 3 values: 1) "warnings" which returns
+a dataframe of BC warnings, 2) "warnings2NA" which returns a
+genotyping dataframe where the warnings have been converted to NAs,
+or "pass_through" which returns a dataframe that is unchanged.}
+}
 \value{
-A dataframe of warnings
+A genotypeR object
 }
 \description{
 Backcross genotype warnings; must provide warning allele
@@ -18,3 +31,4 @@ Backcross genotype warnings; must provide warning allele
 genotype_warnings <- BC_Genotype_Warnings(seq_data, genotype_table, warning_allele="Ref", output="warnings")
 }
 }
+\keyword{genotypeR}

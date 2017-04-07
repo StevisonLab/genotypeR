@@ -6,8 +6,17 @@
 \usage{
 binary_coding(genotype_warnings2NA, genotype_table)
 }
+\arguments{
+\item{genotype_warnings2NA}{this is a genotypeR object that has been
+through BC_Genotype_Warnings with either output="warnings2NA" or
+output="pass_through"}
+
+\item{genotype_table}{this is a marker table produced with
+Ref_Alt_Table}
+}
 \value{
-A dataframe of binary coded genotypes as a slot in the input
+A dataframe of binary coded genotypes as a slot in the
+genotypeR input genotype_warnings2NA
 }
 \description{
 Code genotypes as binary

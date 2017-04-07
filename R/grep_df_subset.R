@@ -3,8 +3,8 @@
 #####################################################################################################
 #' Internal function to remove search and remove columns based on names
 #' 
-#' @param x
-#' @param toMatch
+#' @param x dataframe where columns are to be removed
+#' @param toMatch vector of characters to remove from x
 #' @keywords remove matching columns
 #' @return A subsetted genotypeR object
 #' @export

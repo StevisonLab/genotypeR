@@ -2,15 +2,25 @@
 % Please edit documentation in R/CO.R
 \name{CO}
 \alias{CO}
-\title{Count crossovers per individual}
+\title{Where crossovers occur per individual with 2 ways to deal with
+missing data}
 \usage{
 CO(indata, naive = FALSE)
 }
+\arguments{
+\item{indata}{this is genotype data frame}
+
+\item{naive}{this takes 2 values: 1) FALSE (default) returns
+list with COs distributed by marker distance, and 2) TRUE returns a
+list with COs without regard to marker distance (i.e., at the final
+non-missing data point in a string of missing gentypes)}
+}
 \value{
-data frame of COs counted per individual
+list of COs counted per individual
 }
 \description{
-Count crossovers per individual
+Where crossovers occur per individual with 2 ways to deal with
+missing data
 }
 \examples{
 \dontrun{

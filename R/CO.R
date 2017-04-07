@@ -2,12 +2,16 @@
 #####################################################################################################
 #####################################################################################################
 #####################################################################################################
-#' Count crossovers per individual
+#' Where crossovers occur per individual with 2 ways to deal with
+#' missing data
 #' 
-#' @param indata
-#' @param naive
+#' @param indata this is genotype data frame
+#' @param naive this takes 2 values: 1) FALSE (default) returns
+#' list with COs distributed by marker distance, and 2) TRUE returns a
+#' list with COs without regard to marker distance (i.e., at the final
+#' non-missing data point in a string of missing gentypes)
 #' @keywords count crossovers genotypeR
-#' @return data frame of COs counted per individual
+#' @return list of COs counted per individual
 #' @export
 #' @examples
 #' \dontrun{
@@ -15,8 +19,8 @@
 #' }##subset function
 #' 
     CO <- function(indata, naive=FALSE){
-
-        require(zoo)
+        
+        ##require(zoo)
         ##set to zero to turn off test
         test <- 0
         

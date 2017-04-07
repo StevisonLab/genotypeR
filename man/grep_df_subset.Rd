@@ -6,6 +6,11 @@
 \usage{
 grep_df_subset(x, toMatch)
 }
+\arguments{
+\item{x}{dataframe where columns are to be removed}
+
+\item{toMatch}{vector of characters to remove from x}
+}
 \value{
 A subsetted genotypeR object
 }

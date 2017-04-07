@@ -3,8 +3,12 @@
 #####################################################################################################
 #' Internal function to remove search and remove columns based on names
 #' 
-#' @param data
-#' @param naive
+#' @param data genotype data read in with read_in_sequenom_data
+#' @param naive this takes 2 values: 1) FALSE (default) will count
+#' COs distributed by marker distance, and 2) TRUE returns will count
+#' COs without regard to marker distance (i.e., at the final
+#' non-missing data point in a string of missing gentypes)
+#' 
 #' @keywords Count Crossovers of a genotypeR object
 #' @return genotypeR object with counted crossovers
 #' @export
