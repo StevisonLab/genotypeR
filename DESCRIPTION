@@ -10,4 +10,4 @@ LazyData: true
 RoxygenNote: 6.0.1
 SystemRequirements: The SequenomMarkers marker design function requires vcftools and perl.
 Suggests: testthat
-Imports: reshape2, plyr, doBy
+Imports: reshape2, plyr, doBy, zoo
