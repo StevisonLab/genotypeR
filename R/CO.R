@@ -22,17 +22,17 @@
         
         ##require(zoo)
         ##set to zero to turn off test
-        test <- 0
+###        test <- 0
         
-        if(test==1){
-            ##test data
-            indata <- data.split[[1]]
-            ##comment out once satisfied
-            ##this is to test the case where 1 is followed by NA TWICE
-            ##works - SAS 20170109
-            ##indata <- c("sample", 0,NA,1,0,NA,1)
-            naive <- FALSE
-        }
+###        if(test==1){
+###            ##test data
+###            indata <- data.split[[1]]
+###            ##comment out once satisfied
+###            ##this is to test the case where 1 is followed by NA TWICE
+###            ##works - SAS 20170109
+###            ##indata <- c("sample", 0,NA,1,0,NA,1)
+###            naive <- FALSE
+###        }
 
         ##removes rubish column
 

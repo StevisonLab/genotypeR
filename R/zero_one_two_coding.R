@@ -1,33 +1,31 @@
 ####################################################################################################
 #############################################################################################################################
-#' Code genotypes as binary
+#' Code genotypes as 0, 1, 2
 #' 
-#' @param genotype_warnings2NA this is a genotypeR object that has been
-#' through BC_Genotype_Warnings with either output="warnings2NA" or
-#' output="pass_through"
-#' @param genotype_table this is a marker table produced with
-#' Ref_Alt_Table
-#' @keywords code genotypes as binary
-#' @return A dataframe of binary coded genotypes as a slot in the
-#' genotypeR input genotype_warnings2NA
+#' @param genotype_warnings_passthrough is a genotypeR object that has been processed by BC_Genotype_Warnings
+#' with output="pass_through"
+#' @param genotype_table is a dataframe produced with Ref_Alt_Table
+#' @keywords code genotypes as 0 Homozygous Ref, 1 Heterozygous, and 2 Homozygous Alt
+#' @return A dataframe of 0, 1, and 2 coded genotypes as a slot in the input
 #' @export
 #' @examples
 #' \dontrun{
-#' genotypes_object <- binary_coding(genotype_warnings2NA, genotype_table)
+#' genotype_warnings_passthrough <- BC_Genotype_Warnings(seq_data = seq_test_data, genotype_table = genotype_table, output="pass_though")
+#' bb <- zero_one_two_coding(genotype_warnings_passthrough = bb, genotype_table = genotype_table)
 #' }
-binary_coding <- function(genotype_warnings2NA, genotype_table){
+zero_one_two_coding <- function(genotype_warnings_passthrough, genotype_table){
 
     ##require(reshape2)
     ##require(doBy)
 
 ##test data
-test <- 0
-if(test==1){
-    seq_data <- genotype_warnings2NA
-}
+###test <- 0
+###if(test==1){
+###    seq_data <- genotype_warnings2NA
+###}
 
 
-    seq_data <- genotype_warnings2NA
+    seq_data <- genotype_warnings_passthrough
 
 #####################################################################################################
     ##Error checking; 
@@ -66,9 +64,10 @@ for(i in 1:length(names(seq_split_list))){
     
     ##genotype based on marker name
     genotypes_from_table <- genotype_table[genotype_table$marker_names==chr_to_get_from_genotype_table,]
+    ##removed for Ref/Alt 0, 1, 2 coding
     ##Alt or Ref
-    Alt_or_Ref <- c("Alt", "Ref")
-    Alt_or_Ref <- Alt_or_Ref[-grep(impossible_genotype(seq_data), Alt_or_Ref)]
+    ##Alt_or_Ref <- c("Alt", "Ref")
+    ##Alt_or_Ref <- Alt_or_Ref[-grep(impossible_genotype(seq_data), Alt_or_Ref)]
     
     ##START HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     marker_data_frame <- seq_split_list[[i]]
@@ -79,8 +78,8 @@ for(i in 1:length(names(seq_split_list))){
     ##homo_logic <- marker_data_frame$GENOTYPE==genotypes_from_table[, Alt_or_Ref] & !is.na(marker_data_frame$GENOTYPE)
     ##gsub(homo_logic, "TRUE", "0")
 
-    ##code homozygous as 0; should have no impossible genotypes by now; make sure this is true; maybe check again
-    marker_data_frame[grep(paste("^", genotypes_from_table[,Alt_or_Ref], "$", sep=""), marker_data_frame[,"GENOTYPE"]),"GENOTYPE"] <- "0"
+    ##code homozygous Ref as 0
+    marker_data_frame[grep(paste("^", genotypes_from_table[,"Ref"], "$", sep=""), marker_data_frame[,"GENOTYPE"]),"GENOTYPE"] <- "0"
 
     ##code heterozygous as 1
     toMatch <- genotypes_from_table[,c("Alt_Ref", "Ref_Alt")]
@@ -88,6 +87,9 @@ for(i in 1:length(names(seq_split_list))){
     toMatch <- paste("^", toMatch, "$", sep="")
     ##values for matching grabing the used markers...
     marker_data_frame[grep(paste(toMatch,collapse="|"), marker_data_frame[,"GENOTYPE"]),"GENOTYPE"] <- "1"
+
+    ##code homozygous Ref as 2
+    marker_data_frame[grep(paste("^", genotypes_from_table[,"Alt"], "$", sep=""), marker_data_frame[,"GENOTYPE"]),"GENOTYPE"] <- "2"
     
     out[[i]] <- marker_data_frame
     ###################################################################################################

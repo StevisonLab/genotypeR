@@ -13,12 +13,12 @@
 #' illumina_table <- illumina_Genoype_Table(tab_delimited_file="Noor Plates 1-14__Feb-12-10_FinalReport.txt", flanking_region_length=50, chromosome=rep("chr2", length.out=length(552960)))
 #' }
 illumina_Genoype_Table <- function(tab_delimited_file, flanking_region_length, chromosome){
-test <- 0
-if(test==1){
-    tab_delimited_file <- "Noor Plates 1-14__Feb-12-10_FinalReport.txt"
-    flanking_region_length <- 50
-    chromosome <- rep("chr2", length.out=length(552960))
-}
+###test <- 0
+###if(test==1){
+###    tab_delimited_file <- "Noor Plates 1-14__Feb-12-10_FinalReport.txt"
+###    flanking_region_length <- 50
+###    chromosome <- rep("chr2", length.out=length(552960))
+###}
     
 x <- read.table(tab_delimited_file, sep="\t", skip=9, header=TRUE, stringsAsFactors = FALSE, na.strings="-")
 

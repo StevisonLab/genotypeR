@@ -3,32 +3,84 @@
 \docType{methods}
 \name{genotypes}
 \alias{genotypes}
+\alias{genotypes,genotypeR-method}
+\alias{genotypes,}
+\alias{character,ANY-method}
 \alias{impossible_genotype}
+\alias{impossible_genotype,genotypeR-method}
+\alias{impossible_genotype,}
+\alias{character,ANY-method}
+\alias{binary_genotypes}
+\alias{binary_genotypes,genotypeR-method}
+\alias{binary_genotypes,}
+\alias{character,ANY-method}
 \alias{counted_crossovers}
+\alias{counted_crossovers,genotypeR-method}
+\alias{counted_crossovers,}
+\alias{character,ANY-method}
 \alias{binary_genotypes<-}
+\alias{binary_genotypes<-,genotypeR-method}
+\alias{binary_genotypes<-,}
+\alias{character,ANY-method}
 \alias{genotypes<-}
+\alias{genotypes<-,genotypeR-method}
+\alias{genotypes<-,}
+\alias{character,ANY-method}
 \alias{counted_crossovers<-}
+\alias{counted_crossovers<-,genotypeR-method}
+\alias{counted_crossovers<-,}
+\alias{character,ANY-method}
 \alias{show}
-\title{Method genotypes.}
+\alias{show,genotypeR-method}
+\alias{show,}
+\alias{character,ANY-method}
+\title{Generic genotypes.}
 \usage{
 genotypes(object, ...)
 
+\S4method{genotypes}{genotypeR}(object)
+
 impossible_genotype(object, ...)
+
+\S4method{impossible_genotype}{genotypeR}(object)
+
+binary_genotypes(object, ...)
+
+\S4method{binary_genotypes}{genotypeR}(object)
 
 counted_crossovers(object, ...)
 
+\S4method{counted_crossovers}{genotypeR}(object)
+
 binary_genotypes(object) <- value
+
+\S4method{binary_genotypes}{genotypeR}(object) <- value
 
 genotypes(object) <- value
 
+\S4method{genotypes}{genotypeR}(object) <- value
+
 counted_crossovers(object) <- value
+
+\S4method{counted_crossovers}{genotypeR}(object) <- value
+
+show(object, value)
 
 \S4method{show}{genotypeR}(object)
 }
+\arguments{
+\item{object}{is object}
+
+\item{...}{is ...}
+
+\item{value}{is value}
+}
 \description{
-Method genotypes.
+Generic genotypes.
 
 Method impossible_genotype.
+
+Method binary_genotypes.
 
 Method counted_crossovers.
 

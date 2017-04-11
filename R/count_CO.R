@@ -25,16 +25,16 @@ count_CO <- function(data, naive=FALSE){
     ##inorder to put into slot
     input_data <- data
     
-    require(doBy)
+    ###require(doBy)
 
     ##set to zero to turn off test
-    test <- 0
+    ###test <- 0
 
-    if(test==1){
-        ##test
-        data <- chr2
-        naive=FALSE
-    }
+    ###if(test==1){
+    ###    ##test
+    ###    data <- chr2
+    ###    naive=FALSE
+    ###}
 
     data <- binary_genotypes(data) 
 
@@ -42,7 +42,7 @@ count_CO <- function(data, naive=FALSE){
 
     CO <- function(indata, naive=FALSE){
 
-        require(zoo)
+        ##require(zoo)
         ##set to zero to turn off test
         test <- 0
         

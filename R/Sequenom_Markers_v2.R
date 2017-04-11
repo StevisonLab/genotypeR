@@ -22,15 +22,15 @@ files <- dir(perl_module, full.names=TRUE)
 
 
 ##test data
-test <- 0
-if(test==1){
-    outdir <- paste("/home/ssefick/Desktop/Stevison_PostDoc/Projects/genotypeR/inst/SequenomMarkers", "test_dir", sep="/")
+###test <- 0
+###if(test==1){
+###    outdir <- paste("/home/ssefick/Desktop/Stevison_PostDoc/Projects/genotypeR/inst/SequenomMarkers", "test_dir", sep="/")
 
 
-    vcf1 <- paste(perl_module, "FS14_test.vcf", sep="/")
+###    vcf1 <- paste(perl_module, "FS14_test.vcf", sep="/")
 
-    vcf2 <- paste(perl_module, "FS16_test.vcf", sep="/")
-  }
+###    vcf2 <- paste(perl_module, "FS16_test.vcf", sep="/")
+###  }
 
 if(dir.exists(outdir)==FALSE){
 dir.create(outdir, showWarnings = TRUE, recursive = FALSE, mode = "0777")

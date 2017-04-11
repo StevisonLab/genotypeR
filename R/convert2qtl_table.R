@@ -20,11 +20,11 @@
 convert2qtl_table <- function(genotypeR_object, temp_cross_for_qtl="temp_cross_for_qtl.csv"){
 
 
-    test <- 0
-    if(test==1){
-       ##test data
-       bin <- binary_genotypes(counted_COs)
-    }
+###    test <- 0
+###    if(test==1){
+###       ##test data
+###       bin <- binary_genotypes(counted_COs)
+###    }
 
     bin <- binary_genotypes(genotypeR_object)
     

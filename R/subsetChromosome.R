@@ -14,10 +14,10 @@
 #' }##subset function
 subsetChromosome <- function(aa, chromosome){
 
-    test <- 0
-    if(test==1){
-        chromosome <- "chr2"
-    }
+###    test <- 0
+###    if(test==1){
+###        chromosome <- "chr2"
+###    }
     
     ##binary genotypes
     to_subset_binary <- binary_genotypes(aa)

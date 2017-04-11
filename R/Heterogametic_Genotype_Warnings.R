@@ -24,17 +24,17 @@ Heterogametic_Genotype_Warnings <- function(seq_data, sex_chromosome, sex_vector
 ##for these data it is homo. Ref/Ref
 
 ##test data
-test <- 0
-if(test==1){
-    seq_data <- seq_test_data
+###test <- 0
+###if(test==1){
+###    seq_data <- seq_test_data
     
-    sex_vector <- do.call(rbind, strsplit(seq_data[,"SAMPLE_NAME"], split="_"))[,2]
+###    sex_vector <- do.call(rbind, strsplit(seq_data[,"SAMPLE_NAME"], split="_"))[,2]
 
-    heterogametic_sex <- "M"
+###    heterogametic_sex <- "M"
 
-    sex_chromosome <- "chrXL"
+###    sex_chromosome <- "chrXL"
     
-}
+###}
 
 ##melt by SAMPLE_NAME and WELL
 seq_melt <- melt(seq_data, id.vars=c("SAMPLE_NAME", "WELL"))

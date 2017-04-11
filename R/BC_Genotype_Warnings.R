@@ -21,19 +21,19 @@
 ## can be set to another column in genotype table
 BC_Genotype_Warnings <- function(seq_data, genotype_table, warning_allele="Ref", output="warnings"){
 
-require(reshape2)
-require(doBy)
+##require(reshape2)
+##require(doBy)
 
 ##warnings are an impossible genotype
 ##for these data it is homo. Ref/Ref
 
-##test data
-test <- 0
-if(test==1){
-    seq_data <- seq_test_data
-    ##genotype_table already read in
-    warning_allele <- "Ref"
-}
+###test data
+###test <- 0
+###if(test==1){
+###    seq_data <- seq_test_data
+###    ##genotype_table already read in
+###    warning_allele <- "Ref"
+###}
 
 ##melt by SAMPLE_NAME and WELL
 seq_melt <- melt(seq_data, id.vars=c("SAMPLE_NAME", "WELL"))
@@ -84,7 +84,7 @@ colnames(seq_data_warnings_coded) <- c("SAMPLE_NAME", "WELL", "MARKER", "GENOTYP
     if(output=="warnings2NA"){
         seq_data_warnings_coded[seq_data_warnings_coded$GENOTYPE=="warning","GENOTYPE"] <- NA
         seq_data_warnings_coded[seq_data_warnings_coded$GENOTYPE=="" & !is.na(seq_data_warnings_coded$GENOTYPE),"GENOTYPE"] <- NA
-        seq_data_warnings_coded_S4 <- crossOveRs(genotypes=seq_data_warnings_coded, impossible_genotype=warning_allele)
+        seq_data_warnings_coded_S4 <- genotypeR(genotypes=seq_data_warnings_coded, impossible_genotype=warning_allele)
         return(seq_data_warnings_coded_S4)
     }
     
@@ -92,7 +92,7 @@ colnames(seq_data_warnings_coded) <- c("SAMPLE_NAME", "WELL", "MARKER", "GENOTYP
     if(output=="pass_through"){
         seq_data_warnings_coded[seq_data_warnings_coded$GENOTYPE=="warning","GENOTYPE"] <- NA
         seq_data_warnings_coded[seq_data_warnings_coded$GENOTYPE=="" & !is.na(seq_data_warnings_coded$GENOTYPE),"GENOTYPE"] <- NA
-        seq_data_warnings_coded_S4 <- crossOveRs(genotypes=seq_data_warnings_coded, impossible_genotype=warning_allele)
+        seq_data_warnings_coded_S4 <- genotypeR(genotypes=seq_data_warnings_coded, impossible_genotype=warning_allele)
         return(seq_data_warnings_coded_S4)
     }
     

@@ -15,12 +15,12 @@
 #' }
 read_in_illumina_GoldenGate <- function(tab_delimited_file, chromosome, flanking_region_length){
 
-test <- 0
-if(test==1){
-    tab_delimited_file <- "Noor Plates 1-14__Feb-12-10_FinalReport.txt"
-    flanking_region_length <- 50
-    chromosome <- rep("chr2", length.out=length(552960))
-}
+###test <- 0
+###if(test==1){
+###    tab_delimited_file <- "Noor Plates 1-14__Feb-12-10_FinalReport.txt"
+###    flanking_region_length <- 50
+###    chromosome <- rep("chr2", length.out=length(552960))
+###}
     
 x <- read.table(tab_delimited_file, sep="\t", skip=9, header=TRUE, stringsAsFactors = FALSE)
 

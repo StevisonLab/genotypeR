@@ -3,14 +3,20 @@
 \docType{class}
 \name{genotypeR-class}
 \alias{genotypeR-class}
-\alias{crossOveRs}
-\alias{genotypeR-class}
+\alias{genotypeR}
 \title{Class genotypeR.}
-\usage{
-binary_genotypes(object, ...)
-}
 \description{
 Class \code{genotypeR} defines a gas sensor device.
-
-Method binary_genotypes.
 }
+\section{Slots}{
+
+\describe{
+\item{\code{genotypes}}{is a dataframe of genotypes}
+
+\item{\code{impossible_genotype}}{is a vector}
+
+\item{\code{binary_genotypes}}{is a dataframe of numeric coded genotypes}
+
+\item{\code{counted_crossovers}}{is a dataframe of counted crossovers}
+}}
+
