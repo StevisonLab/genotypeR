@@ -101,8 +101,9 @@ for(i in 1:length(names(seq_split_list))){
 #######################################################
 ##end for; !!!!!start here!!!!!
 #######################################################
-    binary_genotypes(genotype_warnings2NA) <- out_cast
+    ##changed 20170413
+    binary_genotypes(genotype_warnings_passthrough) <- out_cast
 
-    return(genotype_warnings2NA)
+    return(genotype_warnings_passthrough)
     
 }

@@ -62,7 +62,13 @@ for(i in 1:length(names(seq_split_list))){
 
     ##
     marker_data_frame <- seq_split_list[[i]]
-    marker_data_frame[marker_data_frame$value==warning_genotype,"value"] <- "warning"
+
+    ##changed 20170413
+    if(output=="warnings2NA" | output=="warnings"){
+        marker_data_frame[marker_data_frame$value==warning_genotype,"value"] <- "warning"
+
+    }
+    
     out[[i]] <- marker_data_frame
     
 }
