@@ -14,7 +14,8 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' genotype_warnings <- BC_Genotype_Warnings(seq_data, genotype_table, warning_allele="Ref", output="warnings")
+#' genotype_warnings <- BC_Genotype_Warnings(seq_data,    \
+#' genotype_table, warning_allele="Ref", output="warnings")
 #' }
 ## in this case Drosophila FS14/FS16 are Ref/Alt
 ## Homo. Ref is a warning based on the backcross and is the default

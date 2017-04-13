@@ -28,7 +28,8 @@ Backcross genotype warnings; must provide warning allele
 }
 \examples{
 \dontrun{
-genotype_warnings <- BC_Genotype_Warnings(seq_data, genotype_table, warning_allele="Ref", output="warnings")
+genotype_warnings <- BC_Genotype_Warnings(seq_data,    \\
+genotype_table, warning_allele="Ref", output="warnings")
 }
 }
 \keyword{genotypeR}

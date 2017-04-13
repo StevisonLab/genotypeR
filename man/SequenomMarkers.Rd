@@ -22,7 +22,7 @@ This function designs Sequenom markers.
 }
 \examples{
 \dontrun{
-SequenomMarkers("/home/ssefick/R/x86_64-redhat-linux-gnu-library/3.3/genotypeR/SequenomMarkers/FS14_test.vcf", "/home/ssefick/R/x86_64-redhat-linux-gnu-library/3.3/genotypeR/SequenomMarkers/FS16_test.vcf", "/home/ssefick/Desktop/Stevison_PostDoc/Projects/genotypeR/inst/SequenomMarkers/test_dir")
+SequenomMarkers("/path/to/vcf1", "/path/to/vcf2", "path_to_outdir" 
 }
 }
 \keyword{SequenomMarker}

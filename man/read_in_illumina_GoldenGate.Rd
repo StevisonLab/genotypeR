@@ -22,7 +22,9 @@ Read in Illumina GoldenGate AB tab delimited text file
 }
 \examples{
 \dontrun{
-test_data <- read_in_illumina_GoldenGate(tab_delimited_file="Noor Plates 1-14__Feb-12-10_FinalReport.txt", flanking_region_length=50, chromosome=rep("chr2", length.out=length(552960)))
+test_data <- read_in_illumina_GoldenGate(tab_delimited_file= \\
+"path_to_golden_gate_file", flanking_region_length=50,  \\
+chromosome=rep("chr2", length.out=length(552960)))
 }
 }
 \keyword{GoldenGate}

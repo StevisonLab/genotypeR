@@ -10,8 +10,10 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' genotype_warnings_passthrough <- BC_Genotype_Warnings(seq_data = seq_test_data, genotype_table = genotype_table, output="pass_though")
-#' bb <- zero_one_two_coding(genotype_warnings_passthrough = bb, genotype_table = genotype_table)
+#' genotype_warnings_passthrough <- BC_Genotype_Warnings(seq_data =
+#' seq_test_data, genotype_table = genotype_table, output="pass_though")
+#' bb <- zero_one_two_coding(genotype_warnings_passthrough = bb,
+#' genotype_table = genotype_table)
 #' }
 zero_one_two_coding <- function(genotype_warnings_passthrough, genotype_table){
 

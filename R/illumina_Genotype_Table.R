@@ -9,8 +9,12 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' test_data <- read_in_illumina_GoldenGate(tab_delimited_file="Noor Plates 1-14__Feb-12-10_FinalReport.txt", flanking_region_length=50, chromosome=rep("chr2", length.out=length(552960)))
-#' illumina_table <- illumina_Genoype_Table(tab_delimited_file="Noor Plates 1-14__Feb-12-10_FinalReport.txt", flanking_region_length=50, chromosome=rep("chr2", length.out=length(552960)))
+#' test_data <- read_in_illumina_GoldenGate(tab_delimited_file="path_to_goldengate_file"
+#' , flanking_region_length=50, chromosome=rep("chr2",
+#' length.out=length(552960)))
+#' illumina_table <- illumina_Genoype_Table(tab_delimited_file= \
+#' "path_to_goldengate_file", flanking_region_length=50,
+#' chromosome=rep("chr2", length.out=length(552960)))
 #' }
 illumina_Genoype_Table <- function(tab_delimited_file, flanking_region_length, chromosome){
 ###test <- 0

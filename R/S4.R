@@ -148,9 +148,7 @@ setGeneric("show",
 
 #' @rdname genotypeR-methods
 #' @aliases show, character,ANY-method
-setMethod("show",
-          signature = "genotypeR",
-          definition = function(object) {
+setMethod("show", "genotypeR", function(object, value) {
               cat("An object of class ", class(object), "\n", sep = "")
               cat(" ", length(unique(genotypes(object)$SAMPLE_NAME)), " samples by ",
                   length(unique(genotypes(object)$MARKER)), " markers.\n", sep = "")

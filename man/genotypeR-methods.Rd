@@ -66,7 +66,7 @@ counted_crossovers(object) <- value
 
 show(object, value)
 
-\S4method{show}{genotypeR}(object)
+\S4method{show}{genotypeR}(object, value)
 }
 \arguments{
 \item{object}{is object}
