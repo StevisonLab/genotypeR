@@ -32,6 +32,8 @@ my $in_a_snp_S1 = 0;
 my $in_a_snp_S2 = 0;
 my $header=<INPUT>;
 
+my $NUM_FLANKING_SITES = 100;
+
 # loops for every line of the file
 while (<INPUT>) {
 	chomp;
@@ -41,13 +43,13 @@ while (<INPUT>) {
  	$chr = $input[0];
 
 	# if the SNP has 100 base pairs before and is in the second sample only
-	if ($input[3]=~/B/ && $input[6]!~/\./ && $input[7]=~/\./ && $counter>=100) {  
+	if ($input[3]=~/B/ && $input[6]!~/\./ && $input[7]=~/\./ && $counter>=$NUM_FLANKING_SITES) {  
 		$potential_S2 = $input[1];
 		$in_a_snp_S2  = 1;
 		$in_a_snp_S1  = 0;
 		$counter=1;
 	# if the SNP has 100 base pairs before and is in the first sample only
-	} elsif ($input[3]=~/B/ && $input[6]=~/\./ && $input[7]!~/\./ && $counter>=100) { 
+	} elsif ($input[3]=~/B/ && $input[6]=~/\./ && $input[7]!~/\./ && $counter>=$NUM_FLANKING_SITES) { 
 		$potential_S1 = $input[1];
 		$in_a_snp_S1  = 1;
 		$in_a_snp_S2  = 0;
@@ -87,13 +89,13 @@ print OUTPUT2 "Chrom\tStart\tEnd\n";
 # adds good SNPs to the output files
 my $i;
 for ($i = 0; $i <= $#S2_SNPs; $i++) {
-	my $start = $S2_SNPs[$i] - 100;
-	my $end = $S2_SNPs[$i] + 100;
+	my $start = $S2_SNPs[$i] - $NUM_FLANKING_SITES;
+	my $end = $S2_SNPs[$i] + $NUM_FLANKING_SITES;
 	print OUTPUT "$S2_chr_array[$i]\t$start\t$end\n";
 }
 my $j;
 for ($j = 0; $j <= $#S1_SNPs; $j++) {
-	my $start = $S1_SNPs[$j] - 100;
-	my $end = $S1_SNPs[$j] + 100;
+	my $start = $S1_SNPs[$j] - $NUM_FLANKING_SITES;
+	my $end = $S1_SNPs[$j] + $NUM_FLANKING_SITES;
 	print OUTPUT2 "$S1_chr_array[$j]\t$start\t$end\n";
 }
