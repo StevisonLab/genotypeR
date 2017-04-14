@@ -4,7 +4,7 @@
 # Creates bed files that contain all of the usable SNPs for the sample
 # Created to work on one chromosome at a time
 # Created: February 29, 2016
-# Last Updated: June 27, 2016
+# Last Updated: April, 2017
 # Author: Magdalena Castronova
 
 use warnings;
