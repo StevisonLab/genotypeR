@@ -24,7 +24,7 @@ echo "Starting step two..."
 
 if [ ${which_one} == "gg" ]; then
 
-    ${script_dir}/Finding_SNPs_Golden_Gate.pl Sample1_v_Sample2.out.diff.sites_in_files
+    ${script_dir}/Finding_SNPsGolden_Gate.pl Sample1_v_Sample2.out.diff.sites_in_files
 	#echo "I chose gg"
 else
     if [ ${which_one} == "sq" ]; then
