@@ -3,7 +3,7 @@
 # Input the file names in zipped format on the command line.
 # Created: April 3, 2017
 # Last Updated: April 3, 2017
-# Author: Magdalena Castronova
+# Author: Magdalena Castronova; amended for inclusion in R package Stephen A. Sefick (20170417)
 # vcftools v0.1.14+
 
 ##module load vcftools

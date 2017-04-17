@@ -30,7 +30,7 @@ library(genotypeR)
 
 ## Marker design
 
-genotypeR provides **SequenomMarkers** to run a perl/vcftools pipeline to design genotyping markers. As a result, vcftools and perl are needed for marker design. There are 3 ways to develop markers with genotypeR. The example data is located in the SequenomMarkers directory in the package install directory, and should be useful for exploring the use of the package.
+genotypeR provides **SequenomMarkers** to run a perl/vcftools pipeline to design genotyping markers. As a result, vcftools, perl, and a *nix environment are needed for marker design. There are 3 ways to develop markers with genotypeR. The example data is located in the SequenomMarkers directory in the package install directory, and should be useful for exploring the use of the package. Importantly, there are 2 different marker types (i.e., argument type) 100 bp flanking reference bases (type="sq"), and 50 bp flanking reference bases (type="gg").
 
 ### R console
 **SequenomMarkers** can be run from the R console.
@@ -59,42 +59,154 @@ vcf1 <- paste(example_files, "FS14_test.vcf", sep="/")
 vcf2 <- paste(example_files, "FS16_test.vcf", sep="/")
 outdir <- paste(example_files, "test_dir", sep="/")
 
-SequenomMarkers(vcf1, vcf2, outdir)
+SequenomMarkers(vcf1, vcf2, outdir, type="sq")
 ```
 
 ### Shell/Perl/vcftools pipline
-The original code for marker design software can be run from the commandline. This code is contained in the SequenomMarkers folder in the genotypeR installation directory, or from github ([SequenomMarkers](https://github.com/mcastronova/SequenomMarkers)).
+The original code for marker design software can be run from the commandline. This code is contained in the SequenomMarkers folder in the genotypeR installation directory (R/SequenomMarkers/R/R\_Pipeline\_Rapper.sh), or directly from github ([https://github.com/StevisonLab/genotypeR/tree/master/inst/SequenomMarkers](https://github.com/StevisonLab/genotypeR/tree/master/inst/SequenomMarkers)). 
+
+
+
+## Post marker design/Pre-genotyping
+After markers are designed, and before genotyping is conducted on the sequenom, marker names need to be generated from **SequenomMarkers**. The marker output from **SequenomMarkers** needs to be read into R with **read_in_Master_SNPs_data** and converted to a data frame with ***make_marker_names*** with marker names suitable for genotypeR. We have provied example data in the extdata directory of the package installation directory. 2_sequenom_plate_2_chip_8_dpseudo_plasticity_1_10_2017.csv is a raw data file that is the same data as the genotypes_data provided with the package and filtered_markers.txt is the same as the data provided by markers. For simplicity I will use the data provided with the package, but the raw data is provided for the user's reference.
+
+```{R, echo=TRUE, eval=TRUE, results=TRUE}
+dir(system.file("extdata", package = "genotypeR"))
+```
+
+```{R, echo=TRUE, eval=TRUE}
+## read in marker data
+data(markers)
+## make marker names
+marker_names <- make_marker_names(markers)
+```
+
+These can be written as a csv for use in the Sequenom as a csv file.
 
 ```{R, echo=TRUE, eval=FALSE}
-
+write.csv(marker_names, "/your/dir/file.csv")
 ```
 
-## Figures
+## Genotyping
+This will be conducted on the platform the markers were designed for. Our example will revolve around the Sequenom platform, but we have implemented these the work flow for other genotyping platforms as well.
 
-The figure sizes have been customised so that you can easily put two images side-by-side. 
+## Post-genotyping QA/QC
+The QA/QC of genotyping data is an important step in any genotyping experiment. First, genotyping data will need to be read into R with the appropriate function **read_in_sequenom_data**. These data are from the GENOTYPES tab of the excel sheet that is produced from the Sequenom machine, and will be used once converted to a csv. A genotype table is made from **make_marker_names** output with **Ref_Alt_Table**. Generally, you will want to pre-filter the sequenom markers that were used in the genotyping assay in order to be able to use these in further analysis.
 
-```{R, fig.show='hold'}
-plot(1:10)
-plot(10:1)
+```{R, echo=TRUE, eval=TRUE}
+  data(genotypes_data) 
+
+  ## genotype table
+  GT_table <- Ref_Alt_Table(marker_names)
+
+  ## remove those markers that did not work
+  genotypes_data_filtered <- genotypes_data[,c(1, 2, grep("TRUE", colnames(genotypes_data)%in%GT_table$marker_names))]
+```	
+We designed this package from a backcross experiment and, as a result, **BC_Genotype_Warnings** is the name of this function. This is where a genotypeR object is made, and processing data with this function is required for all other downstream analyses with genotypeR. Backcross warnings, those having to do with an impossible genotype, are produced by this function with the output = "warnings".
+
+```{R, echo=TRUE, eval=TRUE}
+## warnings for a backcross design
+##Note warning_allele is Ref allele
+warnings_out <- BC_Genotype_Warnings(seq_data = genotypes_data_filtered, genotype_table = GT_table, output="warnings")
 ```
 
-You can enable figure captions by `fig_caption: yes` in YAML:
+Once, the warnings have been inspected for errors, and then all of these can then be changed to NAs if we are sure that they are incorrect (i.e., bad spectra, etc.). 
 
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
 
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
-
-## More Examples
-
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
-
-```{R, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
+```{R, echo=TRUE, eval=TRUE}
+## warnings for a backcross design
+##Note warning_allele is Ref allele
+warnings_out <- BC_Genotype_Warnings(seq_data = genotypes_data_filtered, genotype_table = GT_table, output="warnings2NA")
 ```
 
-Also a quote using `>`:
+If the user is satisfied that all the data is correct, or the data was generated by another process (different cross, SNP genotyping in wild populations, etc.) the user can use the "pass_through" option for the output argument of **BC_Genotype_Warnings**.
 
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))
+
+```{R, echo=TRUE, eval=TRUE}
+## warnings for a backcross design
+##Note warning_allele is Ref allele
+warnings_out <- BC_Genotype_Warnings(seq_data = genotypes_data_filtered, genotype_table = GT_table, output="pass_through")
+```
+
+Let's return to our example. We can use the "warnings2NA" argument to output because we are confident that we have correct genotypes.
+
+```{R, echo=TRUE, eval=TRUE}
+##We are confident that the warngins should be turned into no Calls
+warnings_out2NA <- BC_Genotype_Warnings(seq_data = genotypes_data_filtered, genotype_table = GT_table, output = "warnings2NA")
+```
+
+We can now binary code this table as 0 (Homozygous) and 1 (Heterozygous) with **binary_coding**. 
+
+```{R, echo=TRUE, eval=TRUE}
+binary_coding_genotypes <- binary_coding(warnings_out2NA, genotype_table = GT_table)
+```
+
+This would be the typical use for a backcross design. **zero_one_two_coding** if data is used where 3 states would be able to be assigned.
+
+```{R, echo=TRUE, eval=FALSE}
+binary_coding_genotypes <- zero_one_two_coding(warnings_out2NA, genotype_table = GT_table)
+```
+After binary coding, we can count crossovers with **count_CO**, but first the user should subset based on chromosome.
+
+```{R, echo=TRUE, eval=TRUE}
+chr2 <- subsetChromosome(binary_coding_genotypes, chromosome="chr2")
+
+crossover_count <- count_CO(chr2)
+```
+## Other import/export functions
+
+### export
+Our backcross example can be utilized to show how our data can be output to the rqtl package.
+
+```{R, echo=TRUE, eval=TRUE}
+##writes out the data
+convert2qtl_table(chr2)
+
+##reads in the data to rqtl
+library(qtl)
+rqtl_object <- read.cross("csv", ".", "temp_cross_for_qtl.csv", na.strings="NA")
+```
+This allows genotyping data to undergo QA/QC, and then be utilized for other things like qualitative trait mapping among other things. The **convert2qtl_table** will also work with data that has been 0/1/2 coded with **zero_one_two_coding**.
+
+### import
+Another popular genotyping platform, Illumina's GoldenGate, is also supported by the genotypeR package. A/B coded data can be read in with **read_in_illumina_GoldenGate**, and a marker table can be created with **illumina_Genoype_Table**. This data can then be utilized in further genotypeR analysis.
+
+```{R, echo=TRUE, eval=FALSE}
+test_data <- read_in_illumina_GoldenGate(tab_delimited_file="path_to_goldengate_file", flanking_region_length=50, chromosome=rep("chr2", length.out=length(552960)))
+
+illumina_table <- illumina_Genoype_Table(tab_delimited_file="path_to_goldengate_file", flanking_region_length=50, chromosome=rep("chr2", length.out=length(552960)))
+
+
+illumina_cross <- BC_Genotype_Warnings(seq_data = test_data, genotype_table = illumina_table, output="warnings")
+```
+## accessor functions
+
+genotypeR is written in the S4 Object Oriented style. As a result we have provided methods for both accessing slots, and to access slots
+
+```{R, echo=TRUE, eval=FALSE}
+##accessor functions
+impossible_genotype
+genotypes
+impossible_genotype
+binary_genotypes
+counted_crossovers
+
+##replacement methods for:
+genotypes
+impossible_genotype
+binary_genotypes
+counted_crossovers
+```
+
+## Internal functions
+genotypeR also provides functions that have not been described yet. **CO** will count crossovers per individual, and can be used for further QA/QC, or can be used for specific research questions.
+
+```{R, echo=TRUE, eval=TRUE}
+library(doBy)
+to_count_CO <- binary_genotypes(chr2)
+counted_per_individuals <- lapply(splitBy(~SAMPLE_NAME+WELL, data=to_count_CO), CO)
+```
+**grep_df_subset** is used to subset a dataframe based on column names. **sort_sequenom** sorts a dataframe based on marker columns produced by genotypeR (i.e., with **make_marker_names**).
+
+## Conclusion
+genotypeR should be a useful package to facilitate a genotyping work flow for both natual and experimental genotyping results.

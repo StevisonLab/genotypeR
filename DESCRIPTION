@@ -10,8 +10,6 @@ LazyData: true
 LazyLoad: yes
 RoxygenNote: 6.0.1
 SystemRequirements: The SequenomMarkers marker design function requires vcftools and Perl.
-Suggests: testthat,
-    knitr,
-    rmarkdown
+Suggests: testthat, knitr, rmarkdown, qtl
 Imports: methods, reshape2, plyr, doBy, zoo, colorspace
 VignetteBuilder: knitr

@@ -4,7 +4,7 @@
 \alias{SequenomMarkers}
 \title{R wrapper script to run Sequenom Marker design pipeline}
 \usage{
-SequenomMarkers(vcf1, vcf2, outdir)
+SequenomMarkers(vcf1, vcf2, outdir, type = "sq")
 }
 \arguments{
 \item{vcf1}{this is an uncompressed vcf file (Ref allele)}
@@ -13,6 +13,8 @@ SequenomMarkers(vcf1, vcf2, outdir)
 
 \item{outdir}{this is where the tab-delimited extended bed file will
 be written}
+
+\item{type}{is a character vector taking "sq" for sequenom (100 bp reference flanking region) or "gg" for goldengate (50 bp reference flanking region).}
 }
 \value{
 SequenomMarker design into "outdir"
