@@ -1,0 +1,100 @@
+---
+title: "genotypeR vignette"
+author: "Stephen A. Sefick"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This vignette describes the parts of/and how to use the genotypeR package for analysing genotyping data. This package provides an integrated interface from designing genotyping markers to final analysis. I will describe the general work flow related to using the package.
+
+## Installing genotypeR
+
+At present, the development version of the package can be installed from https://github.com/StevisonLab/genotypeR, and the stable version can be installed from ([Bioconductor](https://bioconductor.org/)) or ([CRAN](https://www.r-project.org/)) (depending on where it is released).
+
+### install genotypeR
+
+```{R, echo=TRUE, eval=FALSE}
+library(devtools)
+devtools::install_git("https://github.com/StevisonLab/genotypeR")
+```
+
+### load genotypeR
+
+```{R, echo=TRUE, eval=TRUE}
+library(genotypeR)
+```
+
+## Marker design
+
+genotypeR provides **SequenomMarkers** to run a perl/vcftools pipeline to design genotyping markers. As a result, vcftools and perl are needed for marker design. There are 3 ways to develop markers with genotypeR. The example data is located in the SequenomMarkers directory in the package install directory, and should be useful for exploring the use of the package.
+
+### R console
+**SequenomMarkers** can be run from the R console.
+
+```{R, echo=TRUE, eval=TRUE}
+example_files <- system.file("SequenomMarkers", package = "genotypeR")
+
+vcf1 <- paste(example_files, "FS14_test.vcf", sep="/")
+vcf2 <- paste(example_files, "FS16_test.vcf", sep="/")
+outdir <- paste(example_files, "test_dir", sep="/")
+
+SequenomMarkers(vcf1, vcf2, outdir)
+
+```
+### R script
+**SequenomMarkers** can be run using the Rscript interface. This interface is useful when designing marker on a high performace computing platform.
+
+```{R, echo=TRUE, eval=TRUE}
+#!/usr/bin/env Rscript
+
+library(genotypeR)
+
+example_files <- system.file("SequenomMarkers", package = "genotypeR")
+
+vcf1 <- paste(example_files, "FS14_test.vcf", sep="/")
+vcf2 <- paste(example_files, "FS16_test.vcf", sep="/")
+outdir <- paste(example_files, "test_dir", sep="/")
+
+SequenomMarkers(vcf1, vcf2, outdir)
+```
+
+### Shell/Perl/vcftools pipline
+The original code for marker design software can be run from the commandline. This code is contained in the SequenomMarkers folder in the genotypeR installation directory, or from github ([SequenomMarkers](https://github.com/mcastronova/SequenomMarkers)).
+
+```{perl, echo=TRUE, eval=FALSE}
+
+```
+
+## Figures
+
+The figure sizes have been customised so that you can easily put two images side-by-side. 
+
+```{R, fig.show='hold'}
+plot(1:10)
+plot(10:1)
+```
+
+You can enable figure captions by `fig_caption: yes` in YAML:
+
+    output:
+      rmarkdown::html_vignette:
+        fig_caption: yes
+
+Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
+
+## More Examples
+
+You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
+
+```{R, echo=FALSE, results='asis'}
+knitr::kable(head(mtcars, 10))
+```
+
+Also a quote using `>`:
+
+> "He who gives up [code] safety for [code] speed deserves neither."
+([via](https://twitter.com/hadleywickham/status/504368538874703872))

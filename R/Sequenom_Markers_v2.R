@@ -5,6 +5,7 @@
 #' @param vcf2 this is an uncompressed vcf file (Alt allele)
 #' @param outdir this is where the tab-delimited extended bed file will
 #' be written
+#' @param type is a character vector taking "sq" for sequenom (100 bp reference flanking region) or "gg" for goldengate (50 bp reference flanking region).  
 #' @keywords SequenomMarker
 #' @return SequenomMarker design into "outdir"
 #' @export
@@ -13,7 +14,7 @@
 #' SequenomMarkers("/path/to/vcf1", "/path/to/vcf2", "path_to_outdir" 
 #' }
 
-SequenomMarkers <- function(vcf1, vcf2, outdir){
+SequenomMarkers <- function(vcf1, vcf2, outdir, type="sq"){
 
 perl_module <- system.file("SequenomMarkers", package="genotypeR")
 
@@ -38,9 +39,12 @@ dir.create(outdir, showWarnings = TRUE, recursive = FALSE, mode = "0777")
 
 path_to_script <- paste(perl_module, "R_Pipeline_Rapper.sh", sep="/")
 
-cmd <- paste(shQuote(path_to_script), shQuote(perl_module), shQuote(outdir), shQuote(vcf1), shQuote(vcf2), sep=" ")
+cmd <- paste(shQuote(path_to_script), shQuote(perl_module), shQuote(outdir), shQuote(vcf1), shQuote(vcf2), shQuote(type), sep=" ")
 
 system(cmd)
     
 
 }
+
+
+
