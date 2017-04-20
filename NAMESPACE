@@ -2,6 +2,7 @@
 
 export(BC_Genotype_Warnings)
 export(CO)
+export(GoldenGate2iCOM_design)
 export(Heterogametic_Genotype_Warnings)
 export(Ref_Alt_Table)
 export(SequenomMarkers)
