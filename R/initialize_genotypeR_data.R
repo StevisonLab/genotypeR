@@ -1,5 +1,5 @@
 #############################################################################################################################
-#' Backcross genotype warnings; must provide warning allele
+#' initialize_genotypeR_data; must provide warning allele
 #' 
 #' @param seq_data is a dataframe of genotyping data
 #' @param genotype_table dataframe produced with Ref_Alt_Table
@@ -14,13 +14,13 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' genotype_warnings <- BC_Genotype_Warnings(seq_data,    \
+#' genotype_warnings <- initialize_genotypeR_data(seq_data,    \
 #' genotype_table, warning_allele="Ref", output="warnings")
 #' }
 ## in this case Drosophila FS14/FS16 are Ref/Alt
 ## Homo. Ref is a warning based on the backcross and is the default
 ## can be set to another column in genotype table
-BC_Genotype_Warnings <- function(seq_data, genotype_table, warning_allele="Ref", output="warnings"){
+initialize_genotypeR_data <- function(seq_data, genotype_table, warning_allele="Ref", output="warnings"){
 
 ##require(reshape2)
 ##require(doBy)
