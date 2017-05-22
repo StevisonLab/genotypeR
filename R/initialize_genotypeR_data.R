@@ -65,6 +65,7 @@ for(i in 1:length(names(seq_split_list))){
     marker_data_frame <- seq_split_list[[i]]
 
     ##changed 20170413
+    ##This makes it "passthrough..."
     if(output=="warnings2NA" | output=="warnings"){
         marker_data_frame[marker_data_frame$value==warning_genotype,"value"] <- "warning"
 
