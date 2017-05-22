@@ -30,21 +30,21 @@ library(genotypeR)
 
 ## Marker design
 
-genotypeR provides **SequenomMarkers** to run a perl/vcftools pipeline to design genotyping markers. As a result, vcftools, perl, and a *nix environment are needed for marker design. There are 3 ways to develop markers with genotypeR. The example data is located in the SequenomMarkers directory in the package install directory, and should be useful for exploring the use of the package. Importantly, there are 2 different marker types (i.e., argument type) 100 bp flanking reference bases (type="sq"), and 50 bp flanking reference bases (type="gg").
+genotypeR provides **SequenomMarkers** to run a perl/vcftools pipeline to design genotyping markers. As a result, vcftools, perl, and a *nix environment are needed for marker design. There are 3 ways to develop markers with genotypeR. The example data is located in the SequenomMarkers directory in the package install directory, and should be useful for exploring the use of the package. Importantly, there are 2 different marker platforms (i.e., argument type) 100 bp flanking reference bases (platform="sq"), and 50 bp flanking reference bases (platform="gg").
 
 ### R console
 **SequenomMarkers** can be run from the R console.
 
 ```{R, echo=TRUE, eval=TRUE}
-example_files <- system.file("SequenomMarkers", package = "genotypeR")
+example_files <- system.file("SequenomMarkers_v2/two_sample/test_files", package = "genotypeR")
 
-vcf1 <- paste(example_files, "FS14_test.vcf", sep="/")
-vcf2 <- paste(example_files, "FS16_test.vcf", sep="/")
+vcf1 <- paste(example_files, "Sample1.vcf", sep="/")
+vcf2 <- paste(example_files, "Sample2.vcf", sep="/")
 
 ##look in outdir to look at the results in Master_SNPs.sorted.txt.
 outdir <- paste(example_files, "test_dir", sep="/")
 
-SequenomMarkers(vcf1, vcf2, outdir)
+SequenomMarkers(vcf1, vcf2, outdir, platform="sq")
 
 ```
 ### R script
@@ -55,13 +55,13 @@ SequenomMarkers(vcf1, vcf2, outdir)
 
 library(genotypeR)
 
-example_files <- system.file("SequenomMarkers", package = "genotypeR")
+example_files <- system.file("SequenomMarkers_v2/two_sample/test_files", package = "genotypeR")
 
-vcf1 <- paste(example_files, "FS14_test.vcf", sep="/")
-vcf2 <- paste(example_files, "FS16_test.vcf", sep="/")
+vcf1 <- paste(example_files, "Sample1.vcf", sep="/")
+vcf2 <- paste(example_files, "Sample2.vcf", sep="/")
 outdir <- paste(example_files, "test_dir", sep="/")
 
-SequenomMarkers(vcf1, vcf2, outdir, type="sq")
+SequenomMarkers(vcf1, vcf2, outdir, platform="sq")
 ```
 
 ### Shell/Perl/vcftools pipline

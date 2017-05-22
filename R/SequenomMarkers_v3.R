@@ -22,59 +22,59 @@ SequenomMarkers <- function(vcf1=NULL, vcf2=NULL, outdir=NULL, platform="sq"){
 #####################################################################################
 ##turn off and comment out when fully tested
     ##test data
-    test <- 1
+    ##test <- 1
     ##num_sample_test <- "one"
-    num_sample_test <- "two"
+    ##num_sample_test <- "two"
     ##num_sample_test <- "null"
     
-    if(test==1){
+    ##if(test==1){
 
         ##create test dir on desktop
-        test_dir <- "~/Desktop/test_sequenom_dir"
+        ##test_dir <- "~/Desktop/test_sequenom_dir"
         
-        if(dir.exists(test_dir)==FALSE){
-            dir.create(test_dir, showWarnings = TRUE, recursive = FALSE, mode = "0777")
-        }
+        ##if(dir.exists(test_dir)==FALSE){
+            ##dir.create(test_dir, showWarnings = TRUE, recursive = FALSE, mode = "0777")
+        ##}
         ##
         
-        platform="sq"
+        ##platform="sq"
 
         ##outdir_to_test
-        outdir <- "/home/ssefick/Desktop/test_sequenom_dir"
+        ##outdir <- "/home/ssefick/Desktop/test_sequenom_dir"
 
         ##if null
-        if(num_sample_test=="null"){
-            vcf1 <- NULL
-            vcf2 <- NULL
-        }
+        ##if(num_sample_test=="null"){
+            ##vcf1 <- NULL
+            ##vcf2 <- NULL
+        ##}
 
         ##if pop sample
-        if(num_sample_test=="one"){
+        ##if(num_sample_test=="one"){
             
-            pop_sample_path <- paste(perl_module, "pop_sample", sep="/")
+            ##pop_sample_path <- paste(perl_module, "pop_sample", sep="/")
 
-            pop_sample_vcf_test <- paste(pop_sample_path, "test_files", sep="/")
+            ##pop_sample_vcf_test <- paste(pop_sample_path, "test_files", sep="/")
         
-            vcf1 <- paste(pop_sample_vcf_test, "Pop_sample.vcf", sep="/")
+            ##vcf1 <- paste(pop_sample_vcf_test, "Pop_sample.vcf", sep="/")
 
-            vcf2 <- NULL
+            ##vcf2 <- NULL
 
-            outdir <- "/home/ssefick/Desktop/test_sequenom_dir/pop_sample"
-        }
+            ##outdir <- "/home/ssefick/Desktop/test_sequenom_dir/pop_sample"
+        ##}
 
         ##if two sample
-        if(num_sample_test=="two"){
-            two_sample_path <- paste(perl_module, "two_sample", sep="/")
+        ##if(num_sample_test=="two"){
+            ##two_sample_path <- paste(perl_module, "two_sample", sep="/")
 
-            two_sample_vcf_test <- paste(two_sample_path, "test_files", sep="/")
+            ##two_sample_vcf_test <- paste(two_sample_path, "test_files", sep="/")
         
-            vcf1 <- paste(pop_sample_vcf_test, "Sample1.vcf", sep="/")
+            ##vcf1 <- paste(pop_sample_vcf_test, "Sample1.vcf", sep="/")
 
-            vcf2 <- paste(pop_sample_vcf_test, "Sample2.vcf", sep="/")
+            ##vcf2 <- paste(pop_sample_vcf_test, "Sample2.vcf", sep="/")
 
-            outdir <- "/home/ssefick/Desktop/test_sequenom_dir/two_sample"
-        }
-    }
+            ##outdir <- "/home/ssefick/Desktop/test_sequenom_dir/two_sample"
+        ##}
+    ##}
 #####################################################################################
     
     ##Print out some useful warning messages
