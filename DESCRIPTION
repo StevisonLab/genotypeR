@@ -9,7 +9,7 @@ Encoding: UTF-8
 LazyData: true
 LazyLoad: yes
 RoxygenNote: 6.0.1
-SystemRequirements: The SequenomMarkers marker design function requires vcftools and Perl.
+SystemRequirements: The SequenomMarkers marker design function requires vcftools and Perl on windows, and, in addition, awk and bash on *nix.
 Suggests: testthat, knitr, rmarkdown, qtl
 Imports: methods, reshape2, plyr, doBy, zoo, colorspace
 VignetteBuilder: knitr
