@@ -8,7 +8,7 @@
 #' @param output this can take 3 values: 1) "warnings" which returns
 #' a dataframe of BC warnings, 2) "warnings2NA" which returns a
 #' genotyping dataframe where the warnings have been converted to NAs,
-#' or "pass_through" which returns a dataframe that is unchanged.
+#' or "pass_through" which returns a dataframe that is unchanged (default).
 #' @keywords genotypeR
 #' @return A genotypeR object
 #' @export
@@ -20,7 +20,7 @@
 ## in this case Drosophila FS14/FS16 are Ref/Alt
 ## Homo. Ref is a warning based on the backcross and is the default
 ## can be set to another column in genotype table
-initialize_genotypeR_data <- function(seq_data, genotype_table, warning_allele="Ref", output="warnings"){
+initialize_genotypeR_data <- function(seq_data, genotype_table, warning_allele="Ref", output="pass_through"){
 
 ##require(reshape2)
 ##require(doBy)
