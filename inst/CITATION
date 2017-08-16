@@ -1,10 +1,10 @@
 
 citHeader("To cite genotypeR in publications, please use:")
 
-citEntry(entry = "website",
+citEntry(entry = "misc",
   author = "Stephen Sefick et al.",
   title = "genotypeR: an integrated R package for SNP genotype marker design and data analysis",
   year = "2017",
   url = "https://github.com/StevisonLab/genotypeR",
-  doi = "10.5281/zenodo.801482
+  textVersion = "Sefick, S.A., M.A. Castronova, and L.S. Stevison. 2017. genotypeR: an integrated R package for SNP genotype marker design and data analysis. doi://10.5281/zenodo.801482"
 )
