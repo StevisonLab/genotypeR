@@ -13,10 +13,20 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' genotype_warnings_passthrough <- BC_Genotype_Warnings(seq_data =
-#' seq_test_data, genotype_table = genotype_table, output="pass_though")
-#' bb <- zero_one_two_coding(genotype_warnings_passthrough = bb,
-#' genotype_table = genotype_table)
+#' data(genotypes_data)
+#' data(markers)
+#' ## genotype table
+#' marker_names <- make_marker_names(markers)
+#' GT_table <- Ref_Alt_Table(marker_names)
+#' ## remove those markers that did not work
+#' genotypes_data_filtered <- genotypes_data[,c(1, 2, grep("TRUE", \
+#' colnames(genotypes_data)%in%GT_table$marker_names))]
+#' 
+#' pass_through <- initialize_genotypeR_data(seq_data \
+#' = genotypes_data_filtered, genotype_table = GT_table, \
+#' output = "pass_through")
+#' 
+#' genotypes_object <- zero_one_two_coding(pass_through, GT_table)
 #' }
 zero_one_two_coding <- function(genotype_warnings_passthrough, genotype_table){
 
