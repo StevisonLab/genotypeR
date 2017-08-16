@@ -21,6 +21,7 @@ Make genotypeR Alt_Ref_Table
 }
 \examples{
 \dontrun{
+##Files not included to provide working example
 test_data <- read_in_illumina_GoldenGate(tab_delimited_file="path_to_goldengate_file"
 , flanking_region_length=50, chromosome=rep("chr2",
 length.out=length(552960)))

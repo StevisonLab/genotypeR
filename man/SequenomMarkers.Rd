@@ -25,7 +25,16 @@ This function designs Sequenom markers.
 }
 \examples{
 \dontrun{
-SequenomMarkers("/path/to/vcf1", "/path/to/vcf2", "path_to_outdir" 
+example_files <- system.file("SequenomMarkers_v2/two_sample/test_files", package = "genotypeR")
+
+vcf1 <- paste(example_files, "Sample1.vcf", sep="/")
+vcf2 <- paste(example_files, "Sample2.vcf", sep="/")
+
+##look in outdir to look at the results in Master_SNPs.sorted.txt.
+outdir <- paste(example_files, "test_dir", sep="/")
+
+SequenomMarkers(vcf1, vcf2, outdir, platform="sq")
+
 }
 }
 \keyword{SequenomMarker}

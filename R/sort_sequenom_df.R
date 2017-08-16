@@ -15,8 +15,10 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' sequenom_data <- read_in_sequenom_data("your.csv")
-#' sort_sequenom_df(sequenom_data)
+#' ##sequenom_data <- read_in_sequenom_data("your.csv")
+#' ##or
+#' data(genotypes_data)
+#' sort_sequenom_df(genotypes_data)
 #' }
 sort_sequenom_df <- function(Sequenom_Data2Sort){
 colnames_seq_df <- colnames(Sequenom_Data2Sort)

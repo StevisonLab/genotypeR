@@ -18,8 +18,10 @@ This function sorts Sequenom Data at the read-in stage.
 }
 \examples{
 \dontrun{
-sequenom_data <- read_in_sequenom_data("your.csv")
-sort_sequenom_df(sequenom_data)
+##sequenom_data <- read_in_sequenom_data("your.csv")
+##or
+data(genotypes_data)
+sort_sequenom_df(genotypes_data)
 }
 }
 \keyword{sequenom}

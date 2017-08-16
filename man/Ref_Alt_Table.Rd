@@ -17,6 +17,8 @@ Make reference/alternate allelle table from make_marker_names output
 }
 \examples{
 \dontrun{
+data(markers)
+markers_in_study <- make_marker_names(markers)
 genotype_table <- Ref_Alt_Table(markers_in_study = markers_in_study)
 }
 }
