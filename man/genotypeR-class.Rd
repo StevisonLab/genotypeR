@@ -4,16 +4,88 @@
 \name{genotypeR-class}
 \alias{genotypeR-class}
 \alias{genotypeR}
+\alias{genotypes}
+\alias{genotypes,genotypeR-method}
+\alias{impossible_genotype}
+\alias{impossible_genotype,genotypeR-method}
+\alias{binary_genotypes}
+\alias{binary_genotypes,genotypeR-method}
+\alias{counted_crossovers}
+\alias{counted_crossovers,genotypeR-method}
+\alias{binary_genotypes<-}
+\alias{binary_genotypes<-,genotypeR-method}
+\alias{genotypes<-}
+\alias{genotypes<-,genotypeR-method}
+\alias{counted_crossovers<-}
+\alias{counted_crossovers<-,genotypeR-method}
+\alias{show}
+\alias{show,genotypeR-method}
 \title{Class genotypeR.}
+\usage{
+genotypes(object, ...)
+
+\S4method{genotypes}{genotypeR}(object)
+
+impossible_genotype(object, ...)
+
+\S4method{impossible_genotype}{genotypeR}(object)
+
+binary_genotypes(object, ...)
+
+\S4method{binary_genotypes}{genotypeR}(object)
+
+counted_crossovers(object, ...)
+
+\S4method{counted_crossovers}{genotypeR}(object)
+
+binary_genotypes(object) <- value
+
+\S4method{binary_genotypes}{genotypeR}(object) <- value
+
+genotypes(object) <- value
+
+\S4method{genotypes}{genotypeR}(object) <- value
+
+counted_crossovers(object) <- value
+
+\S4method{counted_crossovers}{genotypeR}(object) <- value
+
+show(object, value)
+
+\S4method{show}{genotypeR}(object, value)
+}
+\arguments{
+\item{object}{is a genotypeR object}
+
+\item{...}{is ...}
+
+\item{value}{is a value}
+}
 \description{
-Class \code{genotypeR} defines a gas sensor device.
+Class \code{genotypeR} Defines a class and data structure for working with genotyping data.
+
+Generic genotypes.
+
+Method impossible_genotype.
+
+Method binary_genotypes.
+
+Method counted_crossovers.
+
+Method binary_genotypes<-.
+
+Method genotypes<-.
+
+Method counted_crossovers<-.
+
+Method show.
 }
 \section{Slots}{
 
 \describe{
 \item{\code{genotypes}}{is a dataframe of genotypes}
 
-\item{\code{impossible_genotype}}{is a vector}
+\item{\code{impossible_genotype}}{is a vector with Ref/Alt that is the impossible genotype in a backcross design}
 
 \item{\code{binary_genotypes}}{is a dataframe of numeric coded genotypes}
 

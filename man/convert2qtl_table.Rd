@@ -18,7 +18,9 @@ into the working directory}
 table to disk for input into rqtl
 }
 \description{
-write out table for import into rqtl
+\code{convert2qtl_table} will take a genotypeR object that
+contains binary coded genotypes, and export this to a csv
+file suitable for use with Rqtl.
 }
 \examples{
 \dontrun{

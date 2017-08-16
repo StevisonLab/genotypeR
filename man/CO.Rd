@@ -19,8 +19,10 @@ non-missing data point in a string of missing gentypes)}
 list of COs counted per individual
 }
 \description{
-Where crossovers occur per individual with 2 ways to deal with
-missing data
+\code{CO} is an internal function used in \code{count_CO} to count
+crossovers. \code{CO} is provided incase there is a use case for
+the user. We used this function for QA and can be used for
+estimates of crossover assurance.
 }
 \examples{
 \dontrun{

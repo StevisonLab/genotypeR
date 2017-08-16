@@ -2,6 +2,11 @@
 #####################################################################################################
 #####################################################################################################
 #' Internal function to remove search and remove columns based on names
+#'
+#' @description
+#' \code{count_CO} counts crossovers from binary coded genotypes in
+#' a genotypeR object. This function assigns crossovers to
+#' the counted_crossovers slot in a genotypeR object.
 #' 
 #' @param data genotype data read in with read_in_sequenom_data
 #' @param naive this takes 2 values: 1) FALSE (default) will count

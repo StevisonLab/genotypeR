@@ -1,7 +1,10 @@
 #########################################################################
 #' Output GoldenGate markers for assay development with illumina iCOM
 #'
-#' This function outputs GoldenGate markers for assay development with illumina iCOM
+#' @description
+#' \code{GoldenGate2iCOM_design} outputs GoldenGate markers for
+#' SNP genotyping assay development with illumina iCOM.
+#'
 #' @param SequenomMarkers maker data frame from make SequenomMarkers
 #' @param Target_Type SNP/Indel
 #' @param Genome_Build_Version genome build version (number; default 0)

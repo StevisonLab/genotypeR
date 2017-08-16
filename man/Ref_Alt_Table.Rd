@@ -13,7 +13,9 @@ Ref_Alt_Table(markers_in_study)
 A dataframe of Ref/Alt genotypes
 }
 \description{
-Make reference/alternate allelle table from make_marker_names output
+\code{Ref_Alt_Table} makes the ref/alt table used
+in for proper genotype codeing and
+QA/QC \code{initialize_genotypeR_data}.
 }
 \examples{
 \dontrun{

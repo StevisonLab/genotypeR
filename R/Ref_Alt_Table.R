@@ -1,5 +1,10 @@
 #############################################################################################################################
 #' Make reference/alternate allelle table from make_marker_names output
+#'
+#' @description
+#' \code{Ref_Alt_Table} makes the ref/alt table used
+#' in for proper genotype codeing and
+#' QA/QC \code{initialize_genotypeR_data}.
 #' 
 #' @param markers_in_study make_marker_names output
 #' @keywords make_marker_names

@@ -1,5 +1,9 @@
 #' R wrapper script to run Sequenom Marker design pipeline
 #'
+#' @description
+#' \code{SequenomMarkers} runs the SNP genotyping marker design
+#' portion of the genotypeR pipeline.
+#' 
 #' This function designs Sequenom markers.
 #' @param vcf1 this is an uncompressed vcf file (Ref allele)
 #' @param vcf2 this is an uncompressed vcf file (Alt allele)

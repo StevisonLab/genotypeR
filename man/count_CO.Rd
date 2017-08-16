@@ -18,7 +18,9 @@ non-missing data point in a string of missing gentypes)}
 genotypeR object with counted crossovers
 }
 \description{
-Internal function to remove search and remove columns based on names
+\code{count_CO} counts crossovers from binary coded genotypes in
+a genotypeR object. This function assigns crossovers to
+the counted_crossovers slot in a genotypeR object.
 }
 \examples{
 \dontrun{

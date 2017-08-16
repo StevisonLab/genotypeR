@@ -1,5 +1,10 @@
 #######################
 #' Make genotypeR compliant marker names from the output of read_in_Master_SNPs_data function
+#'
+#' @description
+#' \code{make_marker_names} makes genotypeR compliant names. This
+#' is used for input into SNP assay design software. The output is
+#' also used in \code{Ref_Alt_Table}.
 #' 
 #' @param x Output of read_in_Master_SNPs_data
 #' @keywords genotypeR compliant marker names GrandMasterSNPs with the associated markers

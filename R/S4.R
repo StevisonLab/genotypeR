@@ -6,13 +6,16 @@
 ##constructor fxn
 #' Class genotypeR.
 #'
-#' Class \code{genotypeR} defines a gas sensor device.
+#' Class \code{genotypeR} Defines a class and data structure for working with genotyping data.
 #'
 #' @name genotypeR-class
 #' @rdname genotypeR-class
 #' @exportClass genotypeR
+#' @param object is a genotypeR object
+#' @param value is a value
+#' @param ... is ...
 #' @slot genotypes is a dataframe of genotypes
-#' @slot impossible_genotype is a vector
+#' @slot impossible_genotype is a vector with Ref/Alt that is the impossible genotype in a backcross design
 #' @slot binary_genotypes is a dataframe of numeric coded genotypes
 #' @slot counted_crossovers is a dataframe of counted crossovers
 #' @import zoo
@@ -33,49 +36,38 @@ genotypeR <- setClass("genotypeR",
 ##accessor functions to the SLOTS!!!
 ##genotypes
 #' Generic genotypes.
-#' @param object is object
-#' @param ... is ...
-#' @param value is value
-#' @docType methods
-#' @rdname genotypeR-methods
+#' @rdname genotypeR-class
 #' @exportMethod genotypes
 setGeneric("genotypes", function(object, ...) standardGeneric("genotypes"))
 
-#' @rdname genotypeR-methods
-#' @aliases genotypes, character,ANY-method
+#' @rdname genotypeR-class
 setMethod("genotypes", "genotypeR", function(object)object@genotypes)
 
 ##impossible genotype
 #' Method impossible_genotype.
-#' @docType methods
-#' @rdname genotypeR-methods
+#' @rdname genotypeR-class
 #' @exportMethod impossible_genotype
 setGeneric("impossible_genotype", function(object, ...) standardGeneric("impossible_genotype"))
 
-#' @rdname genotypeR-methods
-#' @aliases impossible_genotype, character,ANY-method
+#' @rdname genotypeR-class
 setMethod("impossible_genotype", "genotypeR", function(object)object@impossible_genotype)
 
 ##binary_genotypes
 #' Method binary_genotypes.
-#' @docType methods
-#' @rdname genotypeR-methods
+#' @rdname genotypeR-class
 #' @exportMethod binary_genotypes
 setGeneric("binary_genotypes", function(object, ...) standardGeneric("binary_genotypes"))
 
-#' @rdname genotypeR-methods
-#' @aliases binary_genotypes, character,ANY-method
+#' @rdname genotypeR-class
 setMethod("binary_genotypes", "genotypeR", function(object)object@binary_genotypes)
 
 ##counted_crossovers
 #' Method counted_crossovers.
-#' @docType methods
-#' @rdname genotypeR-methods
+#' @rdname genotypeR-class
 #' @exportMethod counted_crossovers
 setGeneric("counted_crossovers", function(object, ...) standardGeneric("counted_crossovers"))
 
-#' @rdname genotypeR-methods
-#' @aliases counted_crossovers, character,ANY-method
+#' @rdname genotypeR-class
 setMethod("counted_crossovers", "genotypeR", function(object)object@counted_crossovers)
 ####################################################################################################
 
@@ -83,14 +75,12 @@ setMethod("counted_crossovers", "genotypeR", function(object)object@counted_cros
 ##replacement
 ##binary_genotypes
 #' Method binary_genotypes<-.
-#' @docType methods
-#' @rdname genotypeR-methods
+#' @rdname genotypeR-class
 #' @exportMethod binary_genotypes<-
 setGeneric("binary_genotypes<-",
            function(object, value) standardGeneric("binary_genotypes<-"))
 
-#' @rdname genotypeR-methods
-#' @aliases binary_genotypes<-, character,ANY-method
+#' @rdname genotypeR-class
 setMethod("binary_genotypes<-", "genotypeR",
           function(object, value) {
               object@binary_genotypes <- value
@@ -101,14 +91,12 @@ setMethod("binary_genotypes<-", "genotypeR",
 
 ##genotypes
 #' Method genotypes<-.
-#' @docType methods
-#' @rdname genotypeR-methods
+#' @rdname genotypeR-class
 #' @exportMethod genotypes<-
 setGeneric("genotypes<-",
            function(object, value) standardGeneric("genotypes<-"))
 
-#' @rdname genotypeR-methods
-#' @aliases genotypes<-, character,ANY-method
+#' @rdname genotypeR-class
 setMethod("genotypes<-", "genotypeR",
           function(object, value) {
               object@genotypes <- value
@@ -119,14 +107,12 @@ setMethod("genotypes<-", "genotypeR",
 
 ##counted_crossovers
 #' Method counted_crossovers<-.
-#' @docType methods
-#' @rdname genotypeR-methods
+#' @rdname genotypeR-class
 #' @exportMethod counted_crossovers<-
 setGeneric("counted_crossovers<-",
            function(object, value) standardGeneric("counted_crossovers<-"))
 
-#' @rdname genotypeR-methods
-#' @aliases counted_crossovers<-, character,ANY-method
+#' @rdname genotypeR-class
 setMethod("counted_crossovers<-", "genotypeR",
           function(object, value) {
               object@counted_crossovers <- value
@@ -140,14 +126,12 @@ setMethod("counted_crossovers<-", "genotypeR",
 ##methods
 ##genotypes
 #' Method show.
-#' @docType methods
-#' @rdname genotypeR-methods
+#' @rdname genotypeR-class
 #' @exportMethod show
 setGeneric("show",
            function(object, value) standardGeneric("show"))
 
-#' @rdname genotypeR-methods
-#' @aliases show, character,ANY-method
+#' @rdname genotypeR-class
 setMethod("show", "genotypeR", function(object, value) {
               cat("An object of class ", class(object), "\n", sep = "")
               cat(" ", length(unique(genotypes(object)$SAMPLE_NAME)), " samples by ",

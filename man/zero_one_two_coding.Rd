@@ -16,7 +16,7 @@ with output="pass_through"}
 A dataframe of 0, 1, and 2 coded genotypes as a slot in the input
 }
 \description{
-Code genotypes as 0, 1, 2
+\code{zero_one_two_coding} code homozygous reference as 0, heterozygous as 1, and homozygous alternate as 2 using a genotypeR object created with \code{initialize_genotypeR_data} with the pass_through argument.
 }
 \examples{
 \dontrun{

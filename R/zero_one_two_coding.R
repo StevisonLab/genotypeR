@@ -1,6 +1,9 @@
 ####################################################################################################
 #############################################################################################################################
 #' Code genotypes as 0, 1, 2
+#'
+#' @description
+#' \code{zero_one_two_coding} code homozygous reference as 0, heterozygous as 1, and homozygous alternate as 2 using a genotypeR object created with \code{initialize_genotypeR_data} with the pass_through argument. 
 #' 
 #' @param genotype_warnings_passthrough is a genotypeR object that has been processed by BC_Genotype_Warnings
 #' with output="pass_through"

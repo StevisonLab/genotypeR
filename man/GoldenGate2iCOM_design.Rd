@@ -32,7 +32,8 @@ GoldenGate2iCOM_design(SequenomMarkers, Target_Type = "SNP",
 A dataframe suited for the genotypeR package
 }
 \description{
-This function outputs GoldenGate markers for assay development with illumina iCOM
+\code{GoldenGate2iCOM_design} outputs GoldenGate markers for
+SNP genotyping assay development with illumina iCOM.
 }
 \examples{
 \dontrun{

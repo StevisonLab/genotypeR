@@ -15,7 +15,9 @@ grep_df_subset(x, toMatch)
 A subsetted genotypeR object
 }
 \description{
-Internal function to remove search and remove columns based on names
+\code{grep_df_subset} is an interal function that subsets
+a dataframe based on supplied pattern. This function is
+provided incase it is found useful.
 }
 \examples{
 \dontrun{

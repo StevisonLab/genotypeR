@@ -1,5 +1,10 @@
-## illumina_Genoype_Table
+## illumina_Genotype_Table
 #' Make genotypeR Alt_Ref_Table
+#'
+#' @description
+#' \code{illumina_Genotype_Table} produces the Alt_Ref_Table needed
+#' by \code{initialize_genotypeR_data} from illumina's
+#' goldengate platform.
 #' 
 #' @param tab_delimited_file is a tab delimited AB illumina GoldenGate file
 #' @param flanking_region_length is the length in bp of the flanking region of the SNP
@@ -13,11 +18,11 @@
 #' test_data <- read_in_illumina_GoldenGate(tab_delimited_file="path_to_goldengate_file"
 #' , flanking_region_length=50, chromosome=rep("chr2",
 #' length.out=length(552960)))
-#' illumina_table <- illumina_Genoype_Table(tab_delimited_file= \
+#' illumina_table <- illumina_Genotype_Table(tab_delimited_file= \
 #' "path_to_goldengate_file", flanking_region_length=50,
 #' chromosome=rep("chr2", length.out=length(552960)))
 #' }
-illumina_Genoype_Table <- function(tab_delimited_file, flanking_region_length, chromosome){
+illumina_Genotype_Table <- function(tab_delimited_file, flanking_region_length, chromosome){
 ###test <- 0
 ###if(test==1){
 ###    tab_delimited_file <- "Noor Plates 1-14__Feb-12-10_FinalReport.txt"

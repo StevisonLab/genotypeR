@@ -3,7 +3,12 @@
 #####################################################################################################
 #####################################################################################################
 #' write out table for import into rqtl
-#' 
+#'
+#' @description
+#' \code{convert2qtl_table} will take a genotypeR object that
+#' contains binary coded genotypes, and export this to a csv
+#' file suitable for use with Rqtl.
+#'
 #' @param genotypeR_object this is a genotypeR object that has had
 #' genotypes coded as binary with binary_coding
 #' @param temp_cross_for_qtl name of the output file that will be output

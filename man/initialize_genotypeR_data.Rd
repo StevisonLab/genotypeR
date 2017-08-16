@@ -24,7 +24,8 @@ or "pass_through" which returns a dataframe that is unchanged (default).}
 A genotypeR object
 }
 \description{
-initialize_genotypeR_data; must provide warning allele
+This initializes the genotypeR data structure used throughout
+the package.
 }
 \examples{
 \dontrun{

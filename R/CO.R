@@ -4,6 +4,12 @@
 #####################################################################################################
 #' Where crossovers occur per individual with 2 ways to deal with
 #' missing data
+#'
+#' @description
+#' \code{CO} is an internal function used in \code{count_CO} to count
+#' crossovers. \code{CO} is provided incase there is a use case for
+#' the user. We used this function for QA and can be used for
+#' estimates of crossover assurance.
 #' 
 #' @param indata this is genotype data frame
 #' @param naive this takes 2 values: 1) FALSE (default) returns

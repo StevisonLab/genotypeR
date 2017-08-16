@@ -2,6 +2,11 @@
 #######################################################################
 ##Illumina
 #' Read in Illumina GoldenGate AB tab delimited text file
+#'
+#' @description
+#' \code{read_in_illumina_GoldenGate} reads in a tab delimited
+#' output file from illumina GoldenGate SNP genotyping platform for
+#' use in genotypeR.
 #' 
 #' @param tab_delimited_file is a tab delimited AB illumina GoldenGate file
 #' @param flanking_region_length is the length in bp of the flanking region of the SNP

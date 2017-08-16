@@ -18,7 +18,9 @@ read_in_illumina_GoldenGate(tab_delimited_file, chromosome,
 data frame useful used in genotypeR
 }
 \description{
-Read in Illumina GoldenGate AB tab delimited text file
+\code{read_in_illumina_GoldenGate} reads in a tab delimited
+output file from illumina GoldenGate SNP genotyping platform for
+use in genotypeR.
 }
 \examples{
 \dontrun{

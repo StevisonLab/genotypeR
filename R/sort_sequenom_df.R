@@ -7,7 +7,9 @@
 #########################################################################
 #' Sequenom Dataframe Sort
 #'
+#' @description
 #' This function sorts Sequenom Data at the read-in stage.
+#'
 #' @param Sequenom_Data2Sort dataframe to sort produced with the
 #' genotypeR package
 #' @keywords sort sequenom

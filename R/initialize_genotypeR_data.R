@@ -1,5 +1,9 @@
 #############################################################################################################################
 #' initialize_genotypeR_data; must provide warning allele
+#'
+#' @description
+#' This initializes the genotypeR data structure used throughout
+#' the package.
 #' 
 #' @param seq_data is a dataframe of genotyping data
 #' @param genotype_table dataframe produced with Ref_Alt_Table

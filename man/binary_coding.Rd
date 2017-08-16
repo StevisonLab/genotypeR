@@ -19,7 +19,8 @@ A dataframe of binary coded genotypes as a slot in the
 genotypeR input genotype_warnings2NA
 }
 \description{
-Code genotypes as binary
+\code{binary_coding} codes genotypes contained in a genotypeR object
+and places them into a genotypeR object's binary_genotype slot.
 }
 \examples{
 \dontrun{

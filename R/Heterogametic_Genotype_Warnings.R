@@ -1,5 +1,10 @@
 #############################################################################################################################
 #' Heterogametic warnings
+#'
+#' @description
+#' \code{Heterogametic_Genotype_Warnings} provides QA for
+#' backcross designs by determing those organisms that have
+#' an impossible genotype based on their sex.
 #' 
 #' @param seq_data is genotyping data read in with read_in_sequenom_data
 #' @param heterogametic_sex character of heterogametic sex (e.g., "M")

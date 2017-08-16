@@ -15,6 +15,9 @@ read_in_sequenom_data(x, ...)
 A dataframe suited for the genotypeR package
 }
 \description{
+\code{read_in_sequenom_data} reads in a csv file produced from
+the Sequenom platform (i.e., sequenom excel output saved as a csv).
+
 This function is a wrapper function around read.csv in order to genotype data provide data compatible with the genotypeR package.
 }
 \examples{

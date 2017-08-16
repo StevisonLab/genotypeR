@@ -2,6 +2,10 @@
 #####################################################################################################
 #####################################################################################################
 #' Subset genotypeR object by chromosome 
+#'
+#' @description
+#' \code{subsetChromosome} subsets a genotypeR object based on
+#' the supplied chromosome name (must be the same as that in the data).
 #' 
 #' @param aa genotypeR object before binary coding
 #' @param chromosome which chromosome to pull out (e.g., "chr2")

@@ -15,7 +15,8 @@ subsetChromosome(aa, chromosome)
 A subsetted genotypeR object
 }
 \description{
-Subset genotypeR object by chromosome
+\code{subsetChromosome} subsets a genotypeR object based on
+the supplied chromosome name (must be the same as that in the data).
 }
 \examples{
 \dontrun{

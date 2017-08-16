@@ -1,6 +1,10 @@
 ####################################################################################################
 #############################################################################################################################
 #' Code genotypes as binary
+#'
+#' @description
+#' \code{binary_coding} codes genotypes contained in a genotypeR object
+#' and places them into a genotypeR object's binary_genotype slot.  
 #' 
 #' @param genotype_warnings2NA this is a genotypeR object that has been
 #' through BC_Genotype_Warnings with either output="warnings2NA" or

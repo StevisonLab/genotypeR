@@ -21,6 +21,9 @@ be written}
 SequenomMarker design into "outdir"
 }
 \description{
+\code{SequenomMarkers} runs the SNP genotyping marker design
+portion of the genotypeR pipeline.
+
 This function designs Sequenom markers.
 }
 \examples{
