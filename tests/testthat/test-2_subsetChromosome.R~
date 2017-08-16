@@ -1,9 +1,0 @@
-context("Testing function subsetChromosome")
-
-source("test_data_generator.R")
-
-genotype_table <- Ref_Alt_Table(make_marker_names(fake_markers))
-
-fake_geno_data <- initialize_genotypeR_data(seq_data=genotypes_data, genotype_table=genotype_table, warning_allele="Ref", output="pass_through")
-
-

@@ -1,4 +1,0 @@
-library(testthat)
-library(gentypeR)
-
-test_check("genotypeR")
