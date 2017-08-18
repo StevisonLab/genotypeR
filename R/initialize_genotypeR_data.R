@@ -5,14 +5,14 @@
 #' This initializes the genotypeR data structure used throughout
 #' the package.
 #' 
-#' @param seq_data is a dataframe of genotyping data
-#' @param genotype_table dataframe produced with Ref_Alt_Table
+#' @param seq_data is a data frame of genotyping data
+#' @param genotype_table data frame produced with Ref_Alt_Table
 #' @param warning_allele is the impossible allele for a BC design
 #' taking the value "Ref" or "Alt"
 #' @param output this can take 3 values: 1) "warnings" which returns
-#' a dataframe of BC warnings, 2) "warnings2NA" which returns a
-#' genotyping dataframe where the warnings have been converted to NAs,
-#' or "pass_through" which returns a dataframe that is unchanged (default).
+#' a data frame of BC warnings, 2) "warnings2NA" which returns a
+#' genotyping data frame where the warnings have been converted to NAs,
+#' or "pass_through" which returns a data frame that is unchanged (default).
 #' @keywords genotypeR
 #' @return A genotypeR object
 #' @export

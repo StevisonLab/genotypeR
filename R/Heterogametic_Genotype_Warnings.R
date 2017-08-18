@@ -3,8 +3,8 @@
 #'
 #' @description
 #' \code{Heterogametic_Genotype_Warnings} provides QA for
-#' backcross designs by determing those organisms that have
-#' an impossible genotype based on their sex.
+#' back cross designs by determine those organisms that have
+#' an impossible genotypes based on their sex.
 #' 
 #' @param seq_data is genotyping data read in with read_in_sequenom_data
 #' @param heterogametic_sex character of heterogametic sex (e.g., "M")
@@ -13,7 +13,7 @@
 #' chrXL_start_end. The character provided would be "chrXL"
 #' @param sex_vector a vector of the sex of each individual in seq_data coded the same as that in heterogametic sex.
 #' For example, a vector of "F" and "M".
-#' @return A dataframe of warnings
+#' @return A data frame of warnings
 #' @export
 #' @examples
 #' \dontrun{

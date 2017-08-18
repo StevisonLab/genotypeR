@@ -14,8 +14,8 @@
 #' @param Source_Version number (default 0)
 #' @param Sequence_Orientation "forward", "reverse", "unknown" (default "unknown")
 #' @param Plus_Minus strand orientation "Plus" or "Minus" (default "Plus")
-#' @keywords read sequenom
-#' @return A dataframe suited for the genotypeR package
+#' @keywords read Sequenom
+#' @return A data frame suited for the genotypeR package
 #' @export
 #' @examples
 #' \dontrun{

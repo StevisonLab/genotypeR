@@ -12,7 +12,7 @@
 #' @param genotype_table this is a marker table produced with
 #' Ref_Alt_Table
 #' @keywords code genotypes as binary
-#' @return A dataframe of binary coded genotypes as a slot in the
+#' @return A data frame of binary coded genotypes as a slot in the
 #' genotypeR input genotype_warnings2NA
 #' @export
 #' @examples

@@ -11,7 +11,7 @@
 #'
 #' @format An object read in with \code{read_in_sequenom_data}; see \code{\link[genotypeR]{read_in_sequenom_data}}.
 #'
-#' @keywords datasets
+#' @keywords data sets
 #'
 #'
 #' @examples

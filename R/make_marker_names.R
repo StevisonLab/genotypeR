@@ -8,7 +8,7 @@
 #' 
 #' @param x Output of read_in_Master_SNPs_data
 #' @keywords genotypeR compliant marker names GrandMasterSNPs with the associated markers
-#' @return A dataframe of GrandMasterSNPs markers with correct marker names
+#' @return A data frame of GrandMasterSNPs markers with correct marker names
 #' @export
 #' @examples
 #' \dontrun{

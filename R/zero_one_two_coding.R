@@ -7,9 +7,9 @@
 #' 
 #' @param genotype_warnings_passthrough is a genotypeR object that has been processed by BC_Genotype_Warnings
 #' with output="pass_through"
-#' @param genotype_table is a dataframe produced with Ref_Alt_Table
+#' @param genotype_table is a data frame produced with Ref_Alt_Table
 #' @keywords code genotypes as 0 Homozygous Ref, 1 Heterozygous, and 2 Homozygous Alt
-#' @return A dataframe of 0, 1, and 2 coded genotypes as a slot in the input
+#' @return A data frame of 0, 1, and 2 coded genotypes as a slot in the input
 #' @export
 #' @examples
 #' \dontrun{

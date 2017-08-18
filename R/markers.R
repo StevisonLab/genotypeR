@@ -10,7 +10,7 @@
 #'
 #' @format An object read in with \code{read_in_Master_SNPs_data}; see \code{\link[genotypeR]{read_in_Master_SNPs_data}}.
 #'
-#' @keywords datasets
+#' @keywords data sets
 #'
 #'
 #' @examples

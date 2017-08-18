@@ -4,14 +4,14 @@
 #' Internal function to remove search and remove columns based on names
 #'
 #' @description
-#' \code{grep_df_subset} is an interal function that subsets
-#' a dataframe based on supplied pattern. This function is
-#' provided incase it is found useful.
+#' \code{grep_df_subset} is an internal function that subsets
+#' a data frame based on supplied pattern. This function is
+#' provided in case it is found useful.
 #' 
-#' @param x dataframe where columns are to be removed
+#' @param x data frame where columns are to be removed
 #' @param toMatch vector of characters to remove from x
 #' @keywords remove matching columns
-#' @return A subsetted genotypeR object
+#' @return A subset of a genotypeR object
 #' @export
 #' @examples
 #' \dontrun{

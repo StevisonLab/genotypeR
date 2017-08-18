@@ -3,12 +3,12 @@
 #'
 #' @description
 #' This reads in single nucleotide polymorphism markers generated
-#' by the GrandMasterSNPs perl program.
+#' by the GrandMasterSNPs Perl program.
 #' 
-#' @param x This is a tab delimited text file from GrandMasterSNPs perl program
+#' @param x This is a tab delimited text file from GrandMasterSNPs Perl program
 #' @param ... Other arguments passed to the function
 #' @keywords read GrandMasterSNPs
-#' @return A dataframe of GrandMasterSNPs markers
+#' @return A data frame of GrandMasterSNPs markers
 #' @export
 #' @examples
 #' \dontrun{

@@ -7,15 +7,15 @@
 #'
 #' @description
 #' \code{CO} is an internal function used in \code{count_CO} to count
-#' crossovers. \code{CO} is provided incase there is a use case for
-#' the user. We used this function for QA and can be used for
+#' crossovers. \code{CO} is provided in case there is a use case for
+#' the user. We used this function for QA and it can be used for
 #' estimates of crossover assurance.
 #' 
-#' @param indata this is genotype data frame
+#' @param indata this is a binary coded genotype data frame from a genotypeR object (see example below). 
 #' @param naive this takes 2 values: 1) FALSE (default) returns
 #' list with COs distributed by marker distance, and 2) TRUE returns a
 #' list with COs without regard to marker distance (i.e., at the final
-#' non-missing data point in a string of missing gentypes)
+#' non-missing data point in a string of missing genotypes)
 #' @keywords count crossovers genotypeR
 #' @return list of COs counted per individual
 #' @export

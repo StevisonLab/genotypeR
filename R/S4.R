@@ -14,10 +14,10 @@
 #' @param object is a genotypeR object
 #' @param value is a value
 #' @param ... is ...
-#' @slot genotypes is a dataframe of genotypes
-#' @slot impossible_genotype is a vector with Ref/Alt that is the impossible genotype in a backcross design
-#' @slot binary_genotypes is a dataframe of numeric coded genotypes
-#' @slot counted_crossovers is a dataframe of counted crossovers
+#' @slot genotypes is a data frame of genotypes
+#' @slot impossible_genotype is a vector with Ref/Alt that is the impossible genotype in a back cross design
+#' @slot binary_genotypes is a data frame of numeric coded genotypes
+#' @slot counted_crossovers is a data frame of counted crossovers
 #' @import zoo
 #' @import reshape2
 #' @import doBy
