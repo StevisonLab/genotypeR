@@ -15,7 +15,7 @@ output="pass_through"}
 Ref_Alt_Table}
 }
 \value{
-A dataframe of binary coded genotypes as a slot in the
+A data frame of binary coded genotypes as a slot in the
 genotypeR input genotype_warnings2NA
 }
 \description{

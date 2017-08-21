@@ -2,16 +2,16 @@
 % Please edit documentation in R/sort_sequenom_df.R
 \name{sort_sequenom_df}
 \alias{sort_sequenom_df}
-\title{Sequenom Dataframe Sort}
+\title{Sequenom Data frame Sort}
 \usage{
 sort_sequenom_df(Sequenom_Data2Sort)
 }
 \arguments{
-\item{Sequenom_Data2Sort}{dataframe to sort produced with the
+\item{Sequenom_Data2Sort}{data frame to sort produced with the
 genotypeR package}
 }
 \value{
-A sorted dataframe suited for the genotypeR package
+A sorted data frame suited for the genotypeR package
 }
 \description{
 This function sorts Sequenom Data at the read-in stage.

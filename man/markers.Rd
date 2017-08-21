@@ -19,4 +19,5 @@ head(markers)
 colnames(markers)
 
 }
-\keyword{datasets}
+\keyword{data}
+\keyword{sets}

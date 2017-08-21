@@ -12,7 +12,7 @@ subsetChromosome(aa, chromosome)
 \item{chromosome}{which chromosome to pull out (e.g., "chr2")}
 }
 \value{
-A subsetted genotypeR object
+A genotypeR object subset based on the pattern supplied with chromosome
 }
 \description{
 \code{subsetChromosome} subsets a genotypeR object based on

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Ref_Alt_Table.R
 \name{Ref_Alt_Table}
 \alias{Ref_Alt_Table}
-\title{Make reference/alternate allelle table from make_marker_names output}
+\title{Make reference/alternate allele table from make_marker_names output}
 \usage{
 Ref_Alt_Table(markers_in_study)
 }
@@ -10,11 +10,11 @@ Ref_Alt_Table(markers_in_study)
 \item{markers_in_study}{make_marker_names output}
 }
 \value{
-A dataframe of Ref/Alt genotypes
+A data frame of Ref/Alt genotypes
 }
 \description{
 \code{Ref_Alt_Table} makes the ref/alt table used
-in for proper genotype codeing and
+in for proper genotype coding and
 QA/QC \code{initialize_genotypeR_data}.
 }
 \examples{

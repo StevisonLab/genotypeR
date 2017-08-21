@@ -7,16 +7,16 @@
 read_in_Master_SNPs_data(x, ...)
 }
 \arguments{
-\item{x}{This is a tab delimited text file from GrandMasterSNPs perl program}
+\item{x}{This is a tab delimited text file from GrandMasterSNPs Perl program}
 
 \item{...}{Other arguments passed to the function}
 }
 \value{
-A dataframe of GrandMasterSNPs markers
+A data frame of GrandMasterSNPs markers
 }
 \description{
 This reads in single nucleotide polymorphism markers generated
-by the GrandMasterSNPs perl program.
+by the GrandMasterSNPs Perl program.
 }
 \examples{
 \dontrun{

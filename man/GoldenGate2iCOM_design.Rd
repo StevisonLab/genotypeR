@@ -29,7 +29,7 @@ GoldenGate2iCOM_design(SequenomMarkers, Target_Type = "SNP",
 \item{Plus_Minus}{strand orientation "Plus" or "Minus" (default "Plus")}
 }
 \value{
-A dataframe suited for the genotypeR package
+A data frame suited for the genotypeR package
 }
 \description{
 \code{GoldenGate2iCOM_design} outputs GoldenGate markers for
@@ -46,5 +46,5 @@ GG_SNPs <- GoldenGate2iCOM_design(SequenomMarkers)
 write.csv(GG_SNPs, "test.csv", row.names=FALSE)
 }
 }
+\keyword{Sequenom}
 \keyword{read}
-\keyword{sequenom}

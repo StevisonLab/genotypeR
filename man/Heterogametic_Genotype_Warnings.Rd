@@ -20,12 +20,12 @@ For example, a vector of "F" and "M".}
 \item{heterogametic_sex}{character of heterogametic sex (e.g., "M")}
 }
 \value{
-A dataframe of warnings
+A data frame of warnings
 }
 \description{
 \code{Heterogametic_Genotype_Warnings} provides QA for
-backcross designs by determing those organisms that have
-an impossible genotype based on their sex.
+back cross designs by determine those organisms that have
+an impossible genotypes based on their sex.
 }
 \examples{
 \dontrun{

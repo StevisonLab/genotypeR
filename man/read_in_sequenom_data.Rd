@@ -7,18 +7,19 @@
 read_in_sequenom_data(x, ...)
 }
 \arguments{
-\item{x}{This is a csv formated Genotypes tab of exported sequenom data that you would like to read in.}
+\item{x}{This is a csv formatted Genotypes tab of exported sequenom data that you would like to read in.}
 
 \item{...}{Other arguments passed to the function}
 }
 \value{
-A dataframe suited for the genotypeR package
+A data frame suited for the genotypeR package
 }
 \description{
 \code{read_in_sequenom_data} reads in a csv file produced from
 the Sequenom platform (i.e., sequenom excel output saved as a csv).
 
-This function is a wrapper function around read.csv in order to genotype data provide data compatible with the genotypeR package.
+This function is a wrapper function around read.csv in order to read genotype data from the Sequenom Platform,
+and provide data compatible with the genotypeR package.
 }
 \examples{
 \dontrun{

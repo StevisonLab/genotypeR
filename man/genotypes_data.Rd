@@ -20,4 +20,5 @@ head(genotypes_data)
 colnames(genotypes_data)
 
 }
-\keyword{datasets}
+\keyword{data}
+\keyword{sets}

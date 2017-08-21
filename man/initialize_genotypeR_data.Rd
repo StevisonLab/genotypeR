@@ -8,17 +8,17 @@ initialize_genotypeR_data(seq_data, genotype_table, warning_allele = "Ref",
   output = "pass_through")
 }
 \arguments{
-\item{seq_data}{is a dataframe of genotyping data}
+\item{seq_data}{is a data frame of genotyping data}
 
-\item{genotype_table}{dataframe produced with Ref_Alt_Table}
+\item{genotype_table}{data frame produced with Ref_Alt_Table}
 
 \item{warning_allele}{is the impossible allele for a BC design
 taking the value "Ref" or "Alt"}
 
 \item{output}{this can take 3 values: 1) "warnings" which returns
-a dataframe of BC warnings, 2) "warnings2NA" which returns a
-genotyping dataframe where the warnings have been converted to NAs,
-or "pass_through" which returns a dataframe that is unchanged (default).}
+a data frame of BC warnings, 2) "warnings2NA" which returns a
+genotyping data frame where the warnings have been converted to NAs,
+or "pass_through" which returns a data frame that is unchanged (default).}
 }
 \value{
 A genotypeR object

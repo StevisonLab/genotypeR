@@ -10,7 +10,7 @@ make_marker_names(x)
 \item{x}{Output of read_in_Master_SNPs_data}
 }
 \value{
-A dataframe of GrandMasterSNPs markers with correct marker names
+A data frame of GrandMasterSNPs markers with correct marker names
 }
 \description{
 \code{make_marker_names} makes genotypeR compliant names. This

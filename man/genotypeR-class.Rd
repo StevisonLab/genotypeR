@@ -83,12 +83,12 @@ Method show.
 \section{Slots}{
 
 \describe{
-\item{\code{genotypes}}{is a dataframe of genotypes}
+\item{\code{genotypes}}{is a data frame of genotypes}
 
-\item{\code{impossible_genotype}}{is a vector with Ref/Alt that is the impossible genotype in a backcross design}
+\item{\code{impossible_genotype}}{is a vector with Ref/Alt that is the impossible genotype in a back cross design}
 
-\item{\code{binary_genotypes}}{is a dataframe of numeric coded genotypes}
+\item{\code{binary_genotypes}}{is a data frame of numeric coded genotypes}
 
-\item{\code{counted_crossovers}}{is a dataframe of counted crossovers}
+\item{\code{counted_crossovers}}{is a data frame of counted crossovers}
 }}
 

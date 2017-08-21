@@ -7,17 +7,17 @@
 grep_df_subset(x, toMatch)
 }
 \arguments{
-\item{x}{dataframe where columns are to be removed}
+\item{x}{data frame where columns are to be removed}
 
 \item{toMatch}{vector of characters to remove from x}
 }
 \value{
-A subsetted genotypeR object
+A subset of a genotypeR object
 }
 \description{
-\code{grep_df_subset} is an interal function that subsets
-a dataframe based on supplied pattern. This function is
-provided incase it is found useful.
+\code{grep_df_subset} is an internal function that subsets
+a data frame based on supplied pattern. This function is
+provided in case it is found useful.
 }
 \examples{
 \dontrun{
