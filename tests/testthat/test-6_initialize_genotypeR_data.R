@@ -28,7 +28,7 @@ test_that("initialize_genotypeR accesor functions return expected result", {
     expect_equal(impossible_genotype(non_naive_fake_geno_CO), "Ref")
 
     ##genotypes
-    library(reshape)
+##    library(reshape)
     geno <- melt(genotypes_data, id.vars=c("SAMPLE_NAME", "WELL"))
     geno[geno$value=="","value"] <- NA
     colnames(geno) <- c("SAMPLE_NAME", "WELL", "MARKER", "GENOTYPE")

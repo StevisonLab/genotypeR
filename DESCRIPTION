@@ -1,8 +1,8 @@
 Package: genotypeR
-Title: genotypeR: SNP genotype marker design and analysis
-Version: 0.0.0.9000
+Title: SNP Genotype Marker Design and Analysis
+Version: 0.0.1.0
 Authors@R: c(person(given=c("Stephen", "Alfred"), family="Sefick", email = "ssefick@gmail.com", role = c("aut", "cre")), person(given=c("Magdelena", "A"),family="Castronova", email = "mac0079@auburn.edu", role = c("aut")), person(given=c("Laurie", "S"), family="Stevison", email = "lss0021@auburn.edu", role = c("aut")))
-Description: genotypeR implements a common genotyping workflow with a standardized software interface. genotypeR designs genotyping markers from vcf files, outputs markers for multiplexing suitability on various platforms (Sequenom and Illumina GoldenGate), and provides various QA/QC and analysis functions. 
+Description: We implement a common genotyping workflow with a standardized software interface. genotypeR designs genotyping markers from vcf files, outputs markers for multiplexing suitability on various platforms (Sequenom and Illumina GoldenGate), and provides various QA/QC and analysis functions. 
 Depends: R (>= 3.3.2)
 License: GPL (>= 3)
 URL: https://github.com/StevisonLab/genotypeR
