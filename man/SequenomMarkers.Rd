@@ -28,6 +28,7 @@ This function designs Sequenom markers.
 }
 \examples{
 
+\dontrun{
 example_files <- system.file("SequenomMarkers_v2/two_sample/test_files", package = "genotypeR")
 
 vcf1 <- paste(example_files, "Sample1.vcf", sep="/")
@@ -38,6 +39,7 @@ outdir <- paste(example_files, "test_dir", sep="/")
 
 SequenomMarkers(vcf1, vcf2, outdir, platform="sq")
 
+}
 
 }
 \keyword{SequenomMarker}
