@@ -27,7 +27,7 @@
 sort_sequenom_df <- function(Sequenom_Data2Sort, sort_char="chr|contig"){
 colnames_seq_df <- colnames(Sequenom_Data2Sort)
 
-colnames_to_sort <- colnames_seq_df[grep("chr", colnames_seq_df)]
+colnames_to_sort <- colnames_seq_df[grep(sort_char, colnames_seq_df)]
 
 colnames_sort_df <- data.frame(do.call(rbind, strsplit(colnames_to_sort, "_(?=[0-9])", perl=TRUE)))
 
