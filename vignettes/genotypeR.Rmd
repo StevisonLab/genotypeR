@@ -162,7 +162,7 @@ Our backcross example can be utilized to show how our data can be output to the 
 
 ```{R, echo=TRUE, eval=TRUE}
 ##writes out the data
-convert2qtl_table(chr2)
+convert2qtl_table(chr2, chromosome_vect=rep(2, length(binary_genotypes(chr2))-2))
 
 ##reads in the data to rqtl
 library(qtl)
