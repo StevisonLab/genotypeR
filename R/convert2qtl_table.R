@@ -34,7 +34,9 @@
 #' binary_coding_genotypes <- binary_coding(warnings_out2NA, genotype_table = GT_table)
 #' chr2 <- subsetChromosome(binary_coding_genotypes, chromosome="chr2")
 #' count_CO <- count_CO(chr2)
-#' convert2qtl_table(count_CO, paste(temp_cross_for_qtl=getwd(), "test_temp_cross.csv", sep="/"))
+#' convert2qtl_table(count_CO, paste(temp_cross_for_qtl=getwd(),
+#' "test_temp_cross.csv", sep="/"),
+#' chromosome_vect=rep("2", (length(colnames(binary_genotypes(count_CO)))-2)))
 #' 
 #' 
 

@@ -25,9 +25,11 @@ This function is a wrapper function around read.csv in order to read genotype da
 and provide data compatible with the genotypeR package.
 }
 \examples{
-\dontrun{
-sequenom_data <- read_in_sequenom_data("your.csv")
-}
+
+sequenom_file <- system.file("extdata/sequenom_test_data.csv", package = "genotypeR")
+
+sequenom_data <- read_in_sequenom_data(sequenom_file)
+
 }
 \keyword{read}
 \keyword{sequenom}

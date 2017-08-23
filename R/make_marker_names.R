@@ -14,17 +14,19 @@
 #'
 #' data(markers)
 #' markers <- make_marker_names(markers)
-#' 
+#'
+#' \dontrun{
 #' ##example 
-#' ##GrandMasterSNPs_markers  <- read_in_Master_SNPs_data("GrandMasterSNPs_output")
-#' ##marker_names_GrandMasterSNPs_markers <- make_marker_names(GrandMasterSNPs_markers)
-#' ##If subset of markers needed
-#' ##use the sequenom output to subset the overall marker set from
-#' ##GrandMasterSNPs output
-#' ##seq_test_data <- read_in_sequenom_data("path_to_sequenom_data")
-#' ##col_seq_data <- colnames(seq_test_data)
-#' ##col_markers <- test_data_marker_names$marker_names
-#' ##markerinstudy <- test_data_marker_names[col_markers%in%col_seq_data,]
+#' GrandMasterSNPs_markers  <- read_in_Master_SNPs_data("GrandMasterSNPs_output")
+#' marker_names_GrandMasterSNPs_markers <- make_marker_names(GrandMasterSNPs_markers)
+#' If subset of markers needed
+#' use the sequenom output to subset the overall marker set from
+#' GrandMasterSNPs output
+#' seq_test_data <- read_in_sequenom_data("path_to_sequenom_data")
+#' col_seq_data <- colnames(seq_test_data)
+#' col_markers <- test_data_marker_names$marker_names
+#' markerinstudy <- test_data_marker_names[col_markers%in%col_seq_data,]
+#' }
 #' 
 make_marker_names <- function(x){
 

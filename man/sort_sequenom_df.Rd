@@ -21,8 +21,6 @@ This function sorts Sequenom Data at the read-in stage.
 }
 \examples{
 
-##sequenom_data <- read_in_sequenom_data("your.csv")
-##or
 data(genotypes_data)
 sort_sequenom_df(genotypes_data)
 

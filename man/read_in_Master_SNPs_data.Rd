@@ -19,10 +19,12 @@ This reads in single nucleotide polymorphism markers generated
 by the GrandMasterSNPs Perl program.
 }
 \examples{
-\dontrun{
+
 ##this should be used with the output of the PERL pipeline "GrandMasterSNPs"
-GrandMasterSNPs_markers  <- read_in_Master_SNPs_data("GrandMasterSNPs_output")
-}
+marker_file <- system.file("extdata/filtered_markers.txt", package = "genotypeR")
+
+GrandMasterSNPs_markers  <- read_in_Master_SNPs_data(marker_file)
+
 }
 \keyword{GrandMasterSNPs}
 \keyword{read}
