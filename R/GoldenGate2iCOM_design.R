@@ -18,7 +18,7 @@
 #' @return A data frame suited for the genotypeR package
 #' @export
 #' @examples
-#' \dontrun{
+#' 
 #' library(genotypeR)
 #' data(markers)
 #' SequenomMarkers <- markers
@@ -28,7 +28,7 @@
 #' GG_SNPs <- GoldenGate2iCOM_design(SequenomMarkers)
 
 #' write.csv(GG_SNPs, "test.csv", row.names=FALSE)
-#' }
+#'
 GoldenGate2iCOM_design <- function(SequenomMarkers, Target_Type="SNP", Genome_Build_Version="0", Chromosome="0", Coordinate="0", Source="unknown", Source_Version="0", Sequence_Orientation="unknown", Plus_Minus="Plus"){
 
 if(any(nchar(SequenomMarkers$marker)>105)){stop("markers are are malformed. Please inspect the input data")}

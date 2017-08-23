@@ -11,11 +11,11 @@
 #' @return A data frame of Ref/Alt genotypes
 #' @export
 #' @examples
-#' \dontrun{
+#'
 #' data(markers)
 #' markers_in_study <- make_marker_names(markers)
 #' genotype_table <- Ref_Alt_Table(markers_in_study = markers_in_study)
-#' }
+#'
 Ref_Alt_Table <- function(markers_in_study){
     ##look for ATCG at the [Ref/Alt] in the marker from GrandMasterSNPs.pl
     SNP_list <- regmatches(markers_in_study$marker, gregexpr("[A|T|C|G]\\/[A|T|C|G]", markers_in_study$marker))

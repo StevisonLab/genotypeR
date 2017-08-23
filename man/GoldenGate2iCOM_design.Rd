@@ -36,7 +36,7 @@ A data frame suited for the genotypeR package
 SNP genotyping assay development with illumina iCOM.
 }
 \examples{
-\dontrun{
+
 library(genotypeR)
 data(markers)
 SequenomMarkers <- markers
@@ -44,7 +44,7 @@ SequenomMarkers <- markers
 SequenomMarkers$marker <- substr(markers$marker, 51, 155)
 GG_SNPs <- GoldenGate2iCOM_design(SequenomMarkers)
 write.csv(GG_SNPs, "test.csv", row.names=FALSE)
-}
+
 }
 \keyword{Sequenom}
 \keyword{read}

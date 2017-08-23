@@ -17,19 +17,19 @@
 #' @return A genotypeR object
 #' @export
 #' @examples
-#' \dontrun{
+#' 
 #' data(genotypes_data)
 #' data(markers)
 #' ## genotype table
 #' marker_names <- make_marker_names(markers)
 #' GT_table <- Ref_Alt_Table(marker_names)
 #' ## remove those markers that did not work
-#' genotypes_data_filtered <- genotypes_data[,c(1, 2, grep("TRUE", \
+#' genotypes_data_filtered <- genotypes_data[,c(1, 2, grep("TRUE",
 #' colnames(genotypes_data)%in%GT_table$marker_names))]
 #' 
-#' warnings_out2NA <- initialize_genotypeR_data(seq_data = genotypes_data_filtered, \
+#' warnings_out2NA <- initialize_genotypeR_data(seq_data = genotypes_data_filtered,
 #' genotype_table = GT_table, output = "warnings2NA")
-#' }
+#' 
 ## in this case Drosophila FS14/FS16 are Ref/Alt
 ## Homo. Ref is a warning based on the backcross and is the default
 ## can be set to another column in genotype table

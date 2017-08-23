@@ -4,10 +4,13 @@
 \alias{read_in_sequenom_data}
 \title{Read in Sequenom Data}
 \usage{
-read_in_sequenom_data(x, ...)
+read_in_sequenom_data(x, sort_char = "chr|contig", ...)
 }
 \arguments{
 \item{x}{This is a csv formatted Genotypes tab of exported sequenom data that you would like to read in.}
+
+\item{sort_char}{is the character string output by the PERL pipeline in the marker design phase
+(i.e., chr 1000 1050 AAA[A/T]GTC; the chr is the sort_char. Defaults to chr or contig.}
 
 \item{...}{Other arguments passed to the function}
 }

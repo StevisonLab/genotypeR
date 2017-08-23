@@ -20,6 +20,7 @@ by the GrandMasterSNPs Perl program.
 }
 \examples{
 \dontrun{
+##this should be used with the output of the PERL pipeline "GrandMasterSNPs"
 GrandMasterSNPs_markers  <- read_in_Master_SNPs_data("GrandMasterSNPs_output")
 }
 }

@@ -23,23 +23,23 @@ contains binary coded genotypes, and export this to a csv
 file suitable for use with Rqtl.
 }
 \examples{
-\dontrun{
+
 data(genotypes_data)
 data(markers)
 ## genotype table
 marker_names <- make_marker_names(markers)
 GT_table <- Ref_Alt_Table(marker_names)
 ## remove those markers that did not work
-genotypes_data_filtered <- genotypes_data[,c(1, 2, grep("TRUE", \\
+genotypes_data_filtered <- genotypes_data[,c(1, 2, grep("TRUE",
 colnames(genotypes_data)\%in\%GT_table$marker_names))]
 
-warnings_out2NA <- initialize_genotypeR_data(seq_data = genotypes_data_filtered, \\
+warnings_out2NA <- initialize_genotypeR_data(seq_data = genotypes_data_filtered,
 genotype_table = GT_table, output = "warnings2NA")
 binary_coding_genotypes <- binary_coding(warnings_out2NA, genotype_table = GT_table)
 chr2 <- subsetChromosome(binary_coding_genotypes, chromosome="chr2")
 count_CO <- count_CO(chr2)
-convert2qtl_table(count_CO, temp_cross_for_qtl="~/Desktop/temp.csv")
-}
+convert2qtl_table(count_CO, paste(temp_cross_for_qtl=getwd(), "test_temp_cross.csv", sep="/"))
+
 
 }
 \keyword{genotypeR,}

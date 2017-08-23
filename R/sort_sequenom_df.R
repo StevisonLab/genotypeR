@@ -12,17 +12,19 @@
 #'
 #' @param Sequenom_Data2Sort data frame to sort produced with the
 #' genotypeR package
+#' @param sort_char is the character string output by the PERL pipeline in the marker design phase
+#' (i.e., chr 1000 1050 AAA[A/T]GTC; the chr is the sort_char. Defaults to chr or contig. 
 #' @keywords sort sequenom
 #' @return A sorted data frame suited for the genotypeR package
 #' @export
 #' @examples
-#' \dontrun{
+#' 
 #' ##sequenom_data <- read_in_sequenom_data("your.csv")
 #' ##or
 #' data(genotypes_data)
 #' sort_sequenom_df(genotypes_data)
-#' }
-sort_sequenom_df <- function(Sequenom_Data2Sort){
+#' 
+sort_sequenom_df <- function(Sequenom_Data2Sort, sort_char="chr|contig"){
 colnames_seq_df <- colnames(Sequenom_Data2Sort)
 
 colnames_to_sort <- colnames_seq_df[grep("chr", colnames_seq_df)]

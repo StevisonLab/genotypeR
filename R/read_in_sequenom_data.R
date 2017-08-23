@@ -9,6 +9,8 @@
 #' This function is a wrapper function around read.csv in order to read genotype data from the Sequenom Platform,
 #' and provide data compatible with the genotypeR package.
 #' @param x This is a csv formatted Genotypes tab of exported sequenom data that you would like to read in.
+#' @param sort_char is the character string output by the PERL pipeline in the marker design phase
+#' (i.e., chr 1000 1050 AAA[A/T]GTC; the chr is the sort_char. Defaults to chr or contig.
 #' @param ... Other arguments passed to the function
 #' @keywords read sequenom
 #' @return A data frame suited for the genotypeR package
@@ -17,10 +19,10 @@
 #' \dontrun{
 #' sequenom_data <- read_in_sequenom_data("your.csv")
 #' }
-read_in_sequenom_data <- function(x, ...){
+read_in_sequenom_data <- function(x, sort_char="chr|contig", ...){
      sequenom_data <- read.csv(x, stringsAsFactors=FALSE, colClasses=c("character"), ...)
 
-     out <- sort_sequenom_df(sequenom_data)
+     out <- sort_sequenom_df(sequenom_data, sort_char=sort_char)
      
      return(out)
 

@@ -14,7 +14,7 @@
 #' @return SequenomMarker design into "outdir"
 #' @export
 #' @examples
-#' \dontrun{
+#' 
 #' example_files <- system.file("SequenomMarkers_v2/two_sample/test_files", package = "genotypeR")
 #' 
 #' vcf1 <- paste(example_files, "Sample1.vcf", sep="/")
@@ -25,7 +25,7 @@
 #' 
 #' SequenomMarkers(vcf1, vcf2, outdir, platform="sq")
 #' 
-#' }
+#'
 
 SequenomMarkers <- function(vcf1=NULL, vcf2=NULL, outdir=NULL, platform="sq"){
 

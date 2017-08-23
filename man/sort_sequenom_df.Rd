@@ -4,11 +4,14 @@
 \alias{sort_sequenom_df}
 \title{Sequenom Data frame Sort}
 \usage{
-sort_sequenom_df(Sequenom_Data2Sort)
+sort_sequenom_df(Sequenom_Data2Sort, sort_char = "chr|contig")
 }
 \arguments{
 \item{Sequenom_Data2Sort}{data frame to sort produced with the
 genotypeR package}
+
+\item{sort_char}{is the character string output by the PERL pipeline in the marker design phase
+(i.e., chr 1000 1050 AAA[A/T]GTC; the chr is the sort_char. Defaults to chr or contig.}
 }
 \value{
 A sorted data frame suited for the genotypeR package
@@ -17,12 +20,12 @@ A sorted data frame suited for the genotypeR package
 This function sorts Sequenom Data at the read-in stage.
 }
 \examples{
-\dontrun{
+
 ##sequenom_data <- read_in_sequenom_data("your.csv")
 ##or
 data(genotypes_data)
 sort_sequenom_df(genotypes_data)
-}
+
 }
 \keyword{sequenom}
 \keyword{sort}
