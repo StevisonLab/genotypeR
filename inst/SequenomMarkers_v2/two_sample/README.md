@@ -7,10 +7,12 @@ gunzip Sample1.vcf.gz
 Make sure the VCF files are in the same folder as the [wrapper](https://github.com/mcastronova/genotypeR/blob/master/inst/SequenomMarkers_v2/two_sample/Pipeline_rapper_two_sample.sh) and script files. 
 
 To run the entire pipeline, run the wrapper script on the command line and input the two VCF files. An example is below.
+
 Example for GoldenGate:
 `````shell
 ./Pipeline_Rapper_two_sample.sh Sample1.vcf Sample2.vcf gg
 `````
+
 Example for Sequenom:
 `````shell
 ./Pipeline_Rapper_two_sample.sh Sample1.vcf Sample2.vcf sq
