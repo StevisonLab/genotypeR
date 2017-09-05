@@ -3,7 +3,7 @@
 The VCF file must be unzipped before beginning this pipeline.
 If you are not on a Mac, use this example:
 `````shell
-unzip Pop_sample.vcf.gz
+unzip Pop_sample.vcf.zip
 `````
 If you are using a Mac, use the GUI unzip.
 Make sure the VCF file is in the same folder as the [wrapper](https://github.com/mcastronova/genotypeR/blob/master/inst/SequenomMarkers_v2/pop_sample/R_Pipeline_rapper_pop_sample.sh) and script files. 
