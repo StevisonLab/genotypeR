@@ -1,14 +1,16 @@
 # Genotype Markers With Pop Sample
 
 The VCF file must be unzipped before beginning this pipeline.
+If you are not on a Mac, use this example:
 `````shell
-gunzip Pop_sample.vcf.gz
+unzip Pop_sample.vcf.gz
 `````
+If you are using a Mac, use the GUI unzip.
 Make sure the VCF file is in the same folder as the [wrapper](https://github.com/mcastronova/genotypeR/blob/master/inst/SequenomMarkers_v2/pop_sample/R_Pipeline_rapper_pop_sample.sh) and script files. 
 
 To run the entire pipeline, run the wrapper script on the command line and input the VCF file. An example is below.
 `````shell
-./R_Pipeline_rapper_pop_sample.sh [INPUT_DIR] [OUT_DIR] Pop_sample.vcf sq
+./R_Pipeline_rapper_pop_sample.sh ~/Documents/Project ~/Documents/Project/Output Pop_sample.vcf sq
 `````
 The test file used is [Pop_sample.vcf](https://github.com/mcastronova/genotypeR/blob/master/inst/SequenomMarkers_v2/pop_sample/test_files/Pop_sample.vcf.zip).
 
@@ -34,5 +36,5 @@ The [Grandmaster_SNPs_pop_sample.pl](https://github.com/mcastronova/genotypeR/bl
 
 The wrapper script uses the following command to execte step 2.
 `````shell
-./Grandmaster_SNPs_pop_sample.pl Pop_sample_SNPs.txt
+./Grandmaster_SNPs_pop_sample.pl Pop_sample_SNPs.vcf
 `````
