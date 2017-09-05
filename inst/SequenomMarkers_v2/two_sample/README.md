@@ -4,7 +4,7 @@ Both of the VCF files must be unzipped before beginning this pipeline.
 `````shell
 gunzip Sample1.vcf.gz
 `````
-Make sure the VCF files are in the same folder as the [wrapper](https://github.com/mcastronova/genotypeR/blob/master/inst/SequenomMarkers_v2/two_sample/Pipeline_rapper_two_sample.sh) and script files. 
+Make sure the VCF files are in the same folder as the [wrapper](https://github.com/StevisonLab/genotypeR/blob/master/inst/SequenomMarkers_v2/two_sample/Pipeline_rapper_two_sample.sh) and script files. 
 
 To run the entire pipeline, run the wrapper script on the command line and input the two VCF files. An example is below.
 
@@ -41,7 +41,7 @@ The wrapper script uses the following command to execute step 2.
 `````
 
 #### Step 3
-The [Grandmaster_SNPs_two_sample.pl](https://github.com/mcastronova/genotypeR/blob/master/inst/SequenomMarkers_v2/two_sample/Grandmaster_SNPs_two_sample.pl) script is used to make a file containing the chromosome, start position, end position, and the sequence, which contains 100 bases or 50 bases, the SNP, and 100 or 50 more bases on the other side. **The SNP is printed as [REFERNCE/ALTERNATE].**
+The [Grandmaster_SNPs_two_sample.pl](https://github.com/StevisonLab/genotypeR/blob/master/inst/SequenomMarkers_v2/two_sample/Grandmaster_SNPs_two_sample.pl) script is used to make a file containing the chromosome, start position, end position, and the sequence, which contains 100 bases or 50 bases, the SNP, and 100 or 50 more bases on the other side. **The SNP is printed as [REFERNCE/ALTERNATE].**
 
 The wrapper script uses the following command to execte step 3.
 `````shell
