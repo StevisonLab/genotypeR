@@ -2,7 +2,7 @@
 
 Both of the VCF files must be unzipped before beginning this pipeline.
 `````shell
-gunzip FS14_test.vcf.gz
+gunzip Sample1.vcf.gz
 `````
 Make sure the VCF files are in the same folder as the [wrapper](https://github.com/mcastronova/genotypeR/blob/master/inst/SequenomMarkers_v2/two_sample/Pipeline_rapper_two_sample.sh) and script files. 
 
