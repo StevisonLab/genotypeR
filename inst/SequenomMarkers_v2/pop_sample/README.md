@@ -8,7 +8,7 @@ Make sure the VCF file is in the same folder as the [wrapper](https://github.com
 
 To run the entire pipeline, run the wrapper script on the command line and input the VCF file. An example is below.
 `````shell
-./R_Pipeline_rapper_pop_sample.sh Pop_sample.vcf
+./R_Pipeline_rapper_pop_sample.sh [INPUT_DIR] [OUT_DIR] Pop_sample.vcf sq
 `````
 The test file used is [Pop_sample.vcf](https://github.com/mcastronova/genotypeR/blob/master/inst/SequenomMarkers_v2/pop_sample/test_files/Pop_sample.vcf.zip).
 
