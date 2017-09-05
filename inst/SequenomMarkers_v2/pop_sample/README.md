@@ -1,4 +1,4 @@
-# Genotype Markers With Two Samples
+# Genotype Markers With Pop Sample
 
 The VCF file must be unzipped before beginning this pipeline.
 `````shell
