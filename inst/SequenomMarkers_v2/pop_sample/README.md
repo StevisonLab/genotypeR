@@ -6,12 +6,21 @@ If you are not on a Mac, use this example:
 unzip Pop_sample.vcf.zip
 `````
 If you are using a Mac, use the GUI unzip.
-Make sure the VCF file is in the same folder as the [wrapper](https://github.com/mcastronova/genotypeR/blob/master/inst/SequenomMarkers_v2/pop_sample/R_Pipeline_rapper_pop_sample.sh) and script files. 
 
-To run the entire pipeline, run the wrapper script on the command line and input the VCF file. An example is below.
+Make sure the VCF file is in the same folder as the [wrapper](https://github.com/mcastronova/genotypeR/blob/master/inst/SequenomMarkers_v2/pop_sample/Pipeline_rapper_pop_sample.sh) and script files. 
+
+To run the entire pipeline, run the wrapper script on the command line and input the VCF file.
+
+Example for Sequenom:
 `````shell
-./R_Pipeline_rapper_pop_sample.sh ~/Documents/Project ~/Documents/Project/Output Pop_sample.vcf sq
+./Pipeline_rapper_pop_sample.sh ~/Documents/Project ~/Documents/Project/Output Pop_sample.vcf sq
 `````
+
+Example for GoldenGate:
+`````shell
+./Pipeline_rapper_pop_sample.sh ~/Documents/Project ~/Documents/Project/Output Pop_sample.vcf gg
+`````
+
 The test file used is [Pop_sample.vcf](https://github.com/mcastronova/genotypeR/blob/master/inst/SequenomMarkers_v2/pop_sample/test_files/Pop_sample.vcf.zip).
 
 <br />
