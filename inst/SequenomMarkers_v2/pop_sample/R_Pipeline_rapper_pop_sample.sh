@@ -28,4 +28,4 @@ fi
 echo "Step one complete!\n"
 echo "Starting step two..."
 ${script_dir}/Grandmaster_SNPs_pop_sample.pl ${pop_vcf}
-echo "Step three complete!\n"
+echo "Step two complete!\n"
