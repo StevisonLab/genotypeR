@@ -11,12 +11,13 @@
 #' @return A data frame of GrandMasterSNPs markers
 #' @export
 #' @examples
+#' \dontrun{
 #' 
 #' ##this should be used with the output of the PERL pipeline "GrandMasterSNPs"
 #' marker_file <- system.file("extdata/filtered_markers.txt", package = "genotypeR")
 #' 
 #' GrandMasterSNPs_markers  <- read_in_Master_SNPs_data(marker_file)
-#' 
+#'} 
 read_in_Master_SNPs_data <- function(x, ...){
     ##read in table
     out <- read.table(x, stringsAsFactors=FALSE, colClasses=c("character"), sep="\t", ...)

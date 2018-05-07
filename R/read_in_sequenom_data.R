@@ -16,11 +16,11 @@
 #' @return A data frame suited for the genotypeR package
 #' @export
 #' @examples
-#'
+#  \dontrun{
 #' sequenom_file <- system.file("extdata/sequenom_test_data.csv", package = "genotypeR")
 #' 
 #' sequenom_data <- read_in_sequenom_data(sequenom_file)
-#' 
+#' }
 read_in_sequenom_data <- function(x, sort_char="chr|contig", ...){
      sequenom_data <- read.csv(x, stringsAsFactors=FALSE, colClasses=c("character"), ...)
 

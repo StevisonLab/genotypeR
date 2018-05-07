@@ -8,3 +8,13 @@ citEntry(entry = "misc",
   url = "https://github.com/StevisonLab/genotypeR",
   textVersion = "Sefick, S.A., M.A. Castronova, and L.S. Stevison. 2017. genotypeR: an integrated R package for SNP genotype marker design and data analysis. doi://10.5281/zenodo.801482"
 )
+
+citEntry(entry = "article",
+  author = "Stephen Sefick et al.",
+  title = "genotypeR: an integrated R package for SNP genotype marker design and data analysis",
+  journal = "Methods in Ecology and Evolution",
+  year = "2017",
+  volume = "9",
+  pages="1318--1323",
+  doi="https://doi.org/10.1111/2041-210X.12965"
+)
