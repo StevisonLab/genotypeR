@@ -13,8 +13,9 @@ citEntry(entry = "article",
   author = "Stephen Sefick et al.",
   title = "genotypeR: an integrated R package for SNP genotype marker design and data analysis",
   journal = "Methods in Ecology and Evolution",
-  year = "2017",
+  year = "2018",
   volume = "9",
   pages="1318--1323",
-  doi="https://doi.org/10.1111/2041-210X.12965"
+  doi="https://doi.org/10.1111/2041-210X.12965",
+  textVersion="Sefick, S.A., M.A. Castronova, and L.S. Stevison. genotypeR: an integrated R package for SNP genotype marker design and data analysis. Methods in Ecology and Evolution 9:1318-1323."
 )
