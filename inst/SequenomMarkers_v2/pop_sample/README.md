@@ -13,12 +13,12 @@ To run the entire pipeline, run the wrapper script on the command line and input
 
 Example for Sequenom:
 `````shell
-./Pipeline_rapper_pop_sample.sh ~/Documents/Project ~/Documents/Project/Output Pop_sample.vcf sq
+./Pipeline_rapper_pop_sample.sh Pop_sample.vcf sq
 `````
 
 Example for GoldenGate:
 `````shell
-./Pipeline_rapper_pop_sample.sh ~/Documents/Project ~/Documents/Project/Output Pop_sample.vcf gg
+./Pipeline_rapper_pop_sample.sh Pop_sample.vcf gg
 `````
 
 The test file used is [Pop_sample.vcf](https://github.com/StevisonLab/genotypeR/blob/master/inst/SequenomMarkers_v2/pop_sample/test_files/Pop_sample.vcf.zip).
